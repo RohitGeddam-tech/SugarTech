@@ -66,7 +66,7 @@ window.addEventListener("scroll", () => {
     scrolled.style.opacity = "1";
     leftDiv.style.position = "fixed";
   }
-  if (window.pageYOffset > 1325) {
+  if (window.pageYOffset > 1315) {
     digit.style.display = "block";
     digit.classList.add("active");
     here.style.display = "none";
