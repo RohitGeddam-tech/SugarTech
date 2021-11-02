@@ -516,9 +516,9 @@ p {
   margin: auto;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .secondComp .contain .paraImg {
@@ -536,6 +536,13 @@ p {
   font-weight: 600;
   line-height: 54px;
   color: white;
+}
+
+.secondComp .contain .divImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .indexArray {
@@ -1098,6 +1105,9 @@ p {
 
 .digit .contain .right {
   width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .digit .contain .right img {

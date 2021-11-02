@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
   //   console.log("top", document.documentElement.scrollTop);
   console.log("top", window.scrollY);
 
-  if (window.pageYOffset < 10) {
+  if (window.pageYOffset < 20) {
     first.classList.add("active");
     second.classList.remove("active");
     third.classList.remove("active");
@@ -34,7 +34,7 @@ window.addEventListener("scroll", () => {
     thirdImg.style.display = "none";
     // console.warn("firstImg active");
   }
-  if (window.pageYOffset > 10) {
+  if (window.pageYOffset > 20) {
     first.classList.remove("active");
     third.classList.remove("active");
     second.classList.add("active");
@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
     thirdImg.style.display = "none";
     // console.warn("secondImg active");
   }
-  if (window.pageYOffset > 30) {
+  if (window.pageYOffset > 40) {
     third.classList.add("active");
     second.classList.remove("active");
     firstImg.style.display = "none";
@@ -51,14 +51,14 @@ window.addEventListener("scroll", () => {
     thirdImg.style.display = "block";
     // console.warn("secondImg active");
   }
-  if (window.pageYOffset > 40) {
+  if (window.pageYOffset > 50) {
     leftDiv.style.opacity = "0";
     leftDiv.style.position = "absolute";
   } else {
     leftDiv.style.opacity = "1";
     leftDiv.style.position = "fixed";
   }
-  if (window.pageYOffset > 40) {
+  if (window.pageYOffset > 50) {
     aDiv.style.opacity = "1";
     aDiv.style.zIndex = "90";
   } else {
@@ -109,3 +109,25 @@ blackBtn.addEventListener("mouseenter", () => {
 blackBtn.addEventListener("mouseleave", () => {
   btext.innerHTML = "Get in touch";
 });
+
+if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+window.onmousewheel = document.onmousewheel = wheel;
+
+function wheel(event) {
+  var delta = 0;
+  if (event.wheelDelta) delta = event.wheelDelta / 120;
+  else if (event.detail) delta = -event.detail / 3;
+
+  handle(delta);
+  if (event.preventDefault) event.preventDefault();
+  event.returnValue = false;
+}
+
+function handle(delta) {
+  var time = 1000;
+  var distance = 300;
+
+  $('html, body').stop().animate({
+    scrollTop: $(window).scrollTop() - (distance * delta)
+  }, time);
+}
