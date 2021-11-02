@@ -242,6 +242,7 @@ p {
   transition: all 0.8s ease-out;
   display: block;
   z-index: 10;
+  margin: auto;
 }
 
 .whiteBtn:hover .text {
@@ -278,6 +279,13 @@ p {
   transition: all 0.8s ease-out;
   display: block;
   z-index: 10;
+  margin: auto;
+}
+
+.blackBtn .text img{
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
 }
 
 .blackBtn:hover .text {
@@ -337,7 +345,7 @@ p {
   display: block;
 }
 .middle .left .set p span.greyish {
-  color: #7d6c81;
+  color: #7d7c81;
   /* animation: reverse 5s forwards; */
 }
 
@@ -353,6 +361,7 @@ p {
 .middle .right .parta {
   width: 50%;
   opacity: 0;
+  margin-left: -1%;
 }
 
 .middle .right .parta .set {
@@ -360,10 +369,10 @@ p {
   display: flex;
   flex-flow: column;
   position: absolute;
-  bottom: 270px;
+  bottom: 240px;
   /* align-items: center; */
   justify-content: space-between;
-  left: 4.25%;
+  left: 4.45%;
 }
 
 .middle .right .parta .set .bottomScroll {
@@ -411,7 +420,7 @@ p {
   display: block;
 }
 .middle .right .parta .set p span.greyish {
-  color: #7d6c81;
+  color: #7d7c81;
   /* animation: reverse 5s forwards; */
 }
 
@@ -429,27 +438,31 @@ p {
 }
 
 .middle .right .partb img.firstGif {
-  /* position: absolute; */
+  position: fixed;
+  display: none;
   width: 1100px;
   margin-bottom: 40px;
-  margin-top: -50px;
+  margin-top: -90px;
   margin-left: -420px;
   /* top: 0px; */
 }
 
 .middle .right .partb img.secondGif {
-  display: none;
+  position: fixed;
+  /* display: none; */
   width: 1100px;
   margin-bottom: 40px;
-  margin-top: -100px;
+  margin-top: -70px;
   margin-left: -350px;
 }
 
 .middle .right .partb img.lastGif {
+  position: absolute;
   display: none;
-  width: 400px;
-  height: 400px;
+  width: 1100px;
   margin-bottom: 40px;
+  margin-top: -90px;
+  margin-left: -350px;
 }
 
 .middle .right .partb img:nth-child(4) {
@@ -470,7 +483,7 @@ p {
 
 @keyframes grey {
   from {
-    color: #7d6c81;
+    color: #7d7c81;
   }
   to {
     color: #df5851;
@@ -479,7 +492,7 @@ p {
 
 @keyframes reverse {
   from {
-    color: #7d6c81;
+    color: #7d7c81;
   }
   to {
     color: #df5851;
@@ -495,6 +508,7 @@ p {
 .secondComp {
   width: 100%;
   background-color: black;
+  padding: 100px 0;
 }
 
 .secondComp .contain {
@@ -517,6 +531,7 @@ p {
   margin-left: 20px;
   font-family: "Metropolis";
   font-size: 45px;
+  width: 912px;
   font-style: normal;
   font-weight: 600;
   line-height: 54px;
@@ -530,6 +545,7 @@ p {
 .secondLast {
   width: 100%;
   background-color: white;
+  padding-bottom: 40px;
 }
 
 .secondLast .contain {
@@ -591,13 +607,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-top: -10px; */
+  margin-top: -10px;
 }
 
 .footer .contain .right .circle {
-  width: 60px;
-  height: 60px;
-  background-color: white;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(109, 18, 18);
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -612,19 +628,20 @@ p {
 }
 
 .footer .contain .right .circle:hover {
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   /* margin-right: 20px; */
 }
 
 .footer .contain .right .circle:hover img {
-  width: 40px;
-  height: 40px;
+  width: 32.5px;
+  height: 32.5px;
 }
 
 .spotify {
   width: 100%;
   background-color: black;
+  padding: 100px 0;
 }
 
 .spotify .contain {
@@ -1061,6 +1078,7 @@ p {
 .digit .contain .shade .left p {
   font-family: "Metropolis";
   margin: 20px 0;
+  width: 90%;
   margin-top: 0;
   font-size: 18px;
   line-height: 24px;
@@ -1084,6 +1102,7 @@ p {
 
 .digit .contain .right img {
   width: 100%;
+  border-radius: 5px;
   /* height: 250px; */
 }
 

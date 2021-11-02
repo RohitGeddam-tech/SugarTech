@@ -13,6 +13,10 @@ const scrolled = document.getElementById("bottomScroll");
 const digit = document.getElementById("digit");
 const shade = document.getElementById("shade");
 const here = document.getElementById("here");
+const white = document.getElementById("whiteBtn");
+const blackBtn = document.getElementById("blackBtn");
+const text = document.getElementById("text");
+const btext = document.getElementById("btext");
 
 // console.warn("left bound: ",leftDiv.getBoundingClientRect().top);
 window.addEventListener("scroll", () => {
@@ -21,36 +25,38 @@ window.addEventListener("scroll", () => {
   //   console.log("top", document.documentElement.scrollTop);
   console.log("top", window.scrollY);
 
-  if (window.pageYOffset < 5) {
+  if (window.pageYOffset < 10) {
     first.classList.add("active");
     second.classList.remove("active");
     third.classList.remove("active");
-    firstImg.style.display="block";
-    secondImg.style.display='none';
-    thirdImg.style.display='none';
+    firstImg.style.display = "block";
+    secondImg.style.display = "none";
+    thirdImg.style.display = "none";
     // console.warn("firstImg active");
   }
   if (window.pageYOffset > 10) {
     first.classList.remove("active");
     third.classList.remove("active");
     second.classList.add("active");
-    firstImg.style.display="none";
-    secondImg.style.display='block';
+    firstImg.style.display = "none";
+    secondImg.style.display = "block";
     thirdImg.style.display = "none";
     // console.warn("secondImg active");
   }
   if (window.pageYOffset > 30) {
     third.classList.add("active");
     second.classList.remove("active");
-    firstImg.style.display="none";
-    secondImg.style.display='none';
-    thirdImg.style.display='block';
+    firstImg.style.display = "none";
+    secondImg.style.display = "none";
+    thirdImg.style.display = "block";
     // console.warn("secondImg active");
   }
   if (window.pageYOffset > 40) {
     leftDiv.style.opacity = "0";
+    leftDiv.style.position = "absolute";
   } else {
     leftDiv.style.opacity = "1";
+    leftDiv.style.position = "fixed";
   }
   if (window.pageYOffset > 40) {
     aDiv.style.opacity = "1";
@@ -59,14 +65,12 @@ window.addEventListener("scroll", () => {
     aDiv.style.opacity = "0";
     aDiv.style.zIndex = "70";
   }
-  if (window.pageYOffset > 1100) {
+  if (window.pageYOffset > 100) {
     scrolled.style.opacity = "0";
-    leftDiv.style.position = "absolute";
   } else {
     scrolled.style.opacity = "1";
-    leftDiv.style.position = "fixed";
   }
-  if (window.pageYOffset > 1315) {
+  if (window.pageYOffset > 1515) {
     digit.style.display = "block";
     digit.classList.add("active");
     here.style.display = "none";
@@ -87,3 +91,21 @@ if ((digit.style.display = "block")) {
   shade.classList.remove("active");
   // here.style.display = "block";
 }
+
+white.addEventListener("mouseenter", () => {
+  text.innerHTML = "";
+  text.appendChild(document.createElement("img")).src = "./image/blackMail.png";
+});
+
+white.addEventListener("mouseleave", () => {
+  text.innerHTML = "Get in touch";
+});
+
+blackBtn.addEventListener("mouseenter", () => {
+  btext.innerHTML = "";
+  btext.appendChild(document.createElement("img")).src = "./image/whiteMail.png";
+});
+
+blackBtn.addEventListener("mouseleave", () => {
+  btext.innerHTML = "Get in touch";
+});
