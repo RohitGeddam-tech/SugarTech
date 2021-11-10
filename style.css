@@ -200,7 +200,7 @@ p {
   position: relative;
   padding-top: 50px;
   display: flex;
-  height: 100vh;
+  height: 730px;
 }
 
 .middle .left {
@@ -241,6 +241,9 @@ p {
   color: white;
   transition: all 0.8s ease-out;
   display: block;
+  display: flex;
+  align-items: center;
+  height: 38px;
   z-index: 10;
   margin: auto;
 }
@@ -279,13 +282,17 @@ p {
   transition: all 0.8s ease-out;
   display: block;
   z-index: 10;
+  height: 35px;
+  display: flex;
+  align-items: center;
   margin: auto;
 }
 
-.blackBtn .text img{
-  width: 42px;
-  height: 42px;
-  padding-top: 2px;
+.blackBtn .text img,
+.whiteBtn .text img {
+  width: 38px;
+  height: 38px;
+  /* padding-top: 2px; */
 }
 
 .blackBtn:hover .text {
@@ -369,7 +376,7 @@ p {
   display: flex;
   flex-flow: column;
   position: absolute;
-  bottom: 240px;
+  bottom: 250px;
   /* align-items: center; */
   justify-content: space-between;
   left: 4.45%;
@@ -440,10 +447,10 @@ p {
 .middle .right .partb img.firstGif {
   position: fixed;
   display: none;
-  width: 1100px;
-  margin-bottom: 40px;
+  width: 650px;
+  /* margin-bottom: 40px; */
   margin-top: -90px;
-  margin-left: -420px;
+  margin-left: -90px;
   /* top: 0px; */
 }
 
@@ -618,7 +625,7 @@ p {
 }
 
 .footer .contain .right .circle {
-  width: 50px;
+  width: 50px !important;
   height: 50px;
   background-color: white;
   border-radius: 50px;
@@ -634,8 +641,12 @@ p {
   height: 30px;
 }
 
+.footer .contain .right .circle.last {
+  margin-right: 0;
+}
+
 .footer .contain .right .circle:hover {
-  width: 55px;
+  width: 55px !important;
   height: 55px;
   /* margin-right: 20px; */
 }
@@ -934,7 +945,7 @@ p {
   position: relative;
 }
 
-.here .inner{
+.here .inner {
   width: 92%;
   margin: 0 auto;
 }
@@ -1033,6 +1044,7 @@ p {
   /* position: absolute;
   top: 0;
   z-index: 90; */
+  padding-bottom: 80px;
   background-color: black;
 }
 
@@ -1103,6 +1115,43 @@ p {
   margin-top: 0;
 }
 
+.digit .contain .shade.first .right {
+  position: relative;
+}
+
+.digit .contain .shade.first .right .absolute {
+  position: absolute;
+  top: -20px;
+  left: -70px;
+  width: 45%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.digit .contain .shade.second .right {
+  position: relative;
+}
+
+.digit .contain .shade.second {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.digit .contain .shade.second .right .absolute1 {
+  position: relative;
+  top: -20px;
+  left: -60px;
+}
+
+.digit .contain .shade.second .right .absolute {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  width: 45%;
+  height: 160px;
+  object-fit: cover;
+}
+
 .digit .contain .right {
   width: 35%;
   display: flex;
@@ -1130,5 +1179,311 @@ p {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* for ipadpro */
+@media (max-width: 1100px) {
+  .first .contain .middle {
+    height: 100vh;
+  }
+  .first .contain .middle .left {
+    display: none;
+  }
+  .first .contain .middle .right {
+    flex-flow: column;
+    justify-content: center;
+  }
+  .first .contain .middle .right .parta {
+    opacity: 1 !important;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .first .contain .middle .right .parta .set {
+    position: relative;
+    width: fit-content;
+    bottom: auto;
+    left: auto;
+    align-items: center;
+  }
+  .first .contain .middle .right .parta .set p {
+    text-align: center;
+  }
+  .first .contain .middle .right .parta .set .bottomScroll {
+    display: none;
+  }
+  .first .contain .middle .right .partb {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .first .contain .middle .right .partb img.secondGif,
+  img.firstGif,
+  img.lastGif {
+    position: relative !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+  .first .contain .middle .right .partb img.secondGif {
+    margin-top: 30px !important;
+    width: 650px;
+  }
+  /* .first .contain .middle .right .partb img.lastGif{
+    width: 100%;
+  } */
+}
+
+/* for ipad */
+@media (max-width: 900px) {
+  .secondLast .contain {
+    width: 75%;
+    padding: 150px 0;
+  }
+  .secondLast .contain h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .secondComp .contain .paraImg {
+    width: 100%;
+  }
+  .secondComp .contain .paraImg p {
+    font-size: 30px;
+    width: 90%;
+  }
+  .secondComp .contain .divImg img {
+    width: 90%;
+  }
+  .digit .contain .shade {
+    flex-flow: column;
+    padding: 35px;
+    width: 88%;
+  }
+  .digit .contain .shade .down {
+    display: none;
+  }
+  .digit .contain .shade .left,
+  .digit .contain .shade .right {
+    width: 100%;
+  }
+  .digit .contain .shade .left p {
+    width: 100%;
+  }
+  .digit .contain .shade.first .right img {
+    width: 85%;
+    position: relative;
+    left: 60px;
+    top: 40px;
+    padding-bottom: 40px;
+  }
+  .digit .contain .shade.first .right .absolute {
+    /* width: 80%; */
+    left: 0px;
+    height: 220px;
+    width: 30%;
+  }
+  .digit .contain .shade.second {
+    padding-top: 40px;
+  }
+  .digit .contain .shade.second .right .absolute1 {
+    width: 80%;
+  }
+  .digit .contain .shade.second .right .absolute {
+    right: 0;
+    width: 38%;
+  }
+  .spotify .contain h1 {
+    width: 70%;
+    font-size: 30px;
+  }
+  .spotify .contain .spotForm,
+  .plaid .contain .spotForm {
+    width: 100%;
+    flex-flow: column;
+  }
+  .spotify .contain .spotForm .right,
+  .plaid .contain .spotForm .right {
+    width: 100%;
+    order: 1;
+  }
+  .spotify .contain .spotForm .left,
+  .plaid .contain .spotForm .left {
+    width: 95%;
+    order: 2;
+    margin-top: 50px;
+  }
+  /* .spotify .contain .spotForm .right .box, .plaid .contain .spotForm .right .box{
+    width: 90%;
+    margin: 0;
+    flex-flow: column;
+  }
+  .spotify .contain .spotForm .right .box p, .plaid .contain .spotForm .right .box p{
+    margin: 30px 0;
+    margin-bottom: 0;
+  } */
+}
+
+/* for mobile devices */
+@media (max-width: 600px) {
+  .secondLast .contain{
+    width: 92%;
+  }
+  .secondLast .contain h1{
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .footer .contain{
+    flex-flow: column;
+  }
+  .footer .contain .left {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .footer .contain .left p{
+    text-align: center;
+  }
+  .footer .contain .right {
+    width: 50%;
+    justify-content: space-between;
+  }
+  .digit .contain{
+    padding-top: 30px;
+  }
+  .spotify .contain .spotForm,
+  .plaid .contain .spotForm {
+    align-items: center;
+  }
+  .spotify .contain .spotForm .left,
+  .plaid .contain .spotForm .left {
+    width: 90%;
+    flex-flow: column;
+  }
+  .spotify .contain h1 {
+    width: 80%;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .secondComp .contain .paraImg img{
+    display: none;
+  }
+  .secondComp .contain .paraImg p {
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .digit .contain .shade {
+    flex-flow: column;
+    padding: 25px;
+    width: 88%;
+  }
+  .digit .contain .shade.first .right img {
+    width: 80%;
+    position: relative;
+    left: 40px;
+    top: 40px;
+    padding-bottom: 40px;
+  }
+  .digit .contain .shade.first .right .absolute {
+    /* width: 80%; */
+    left: 0px;
+    height: 170px;
+    width: 40%;
+  }
+  .digit .contain .shade.second {
+    padding-top: 40px;
+  }
+  .digit .contain .shade.second .right .absolute1 {
+    width: 82%;
+    left: -40px;
+  }
+  .digit .contain .shade.second .right .absolute {
+    right: 0;
+    width: 38%;
+    bottom: -50px;
+  }
+  .first .contain .middle .right .partb img.secondGif,
+  img.firstGif,
+  img.lastGif {
+    width: 100% !important;
+  }
+  .here .contain .mid{
+    font-size: 24px;
+  }
+  .spotify .contain .spotForm .right .box, .plaid .contain .spotForm .right .box{
+    width: 90%;
+    /* margin: 0;
+    flex-flow: column; */
+  }
+  .first .contain .middle .right .parta .set{
+    width: 100%;
+  }
+  .first .contain .middle .right .parta .set p{
+    font-size: 30px;
+    width: 100%;
+  }
+}
+
+/* for mobile devices */
+@media (max-width: 400px) {
+  .secondLast .contain{
+    width: 92%;
+  }
+  .secondLast .contain h1{
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .spotify .contain h1 {
+    width: 100%;
+    font-size: 18px;
+  }
+  .secondComp .contain .paraImg p {
+    font-size: 18px;
+  }
+  .digit .contain .shade {
+    padding: 15px;
+    width: 90%;
+  }
+  .digit .contain .shade.first .right img {
+    left: 30px;
+  }
+  .digit .contain .shade.first .right .absolute {
+    /* width: 80%; */
+    left: 0px;
+    height: 120px;
+    width: 40%;
+  }
+  .digit .contain .shade.second {
+    padding-top: 40px;
+  }
+  .digit .contain .shade.second .right .absolute1 {
+    left: -25px;
+  }
+  .digit .contain .shade.second .right .absolute {
+    width: 45%;
+    height: 120px;
+  }
+  .here .contain .mid{
+    font-size: 24px;
+  }
+  .spotify .contain .spotForm .right .box, .plaid .contain .spotForm .right .box{
+    width: 100%;
+  }
+  .first .contain .middle .right .parta .set{
+    width: 100%;
+  }
+  .first .contain .middle .right .parta .set p{
+    font-size: 30px;
+    width: 100%;
+  }
+}
+
+/* for more then 1510px screen */
+@media (min-width: 1510px) {
+  .contain {
+    width: 1209px !important;
   }
 }
