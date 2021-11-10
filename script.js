@@ -60,7 +60,7 @@ window.addEventListener("load", () => {
       // console.log("last img", leftDiv.getBoundingClientRect().bottom);
       //   console.log(document.body.scrollHeight);
       //   console.log("top", document.documentElement.scrollTop);
-      console.log("top", window.scrollY);
+      // console.log("top", window.scrollY);
 
       if (window.pageYOffset < 20) {
         first.classList.add("active");
@@ -107,11 +107,12 @@ window.addEventListener("load", () => {
       } else {
         scrolled.style.opacity = "1";
       }
-      if (window.pageYOffset > 1515) {
+      if (window.pageYOffset > 1535) {
         digit.style.display = "block";
         digit.classList.add("active");
         here.style.display = "none";
-      } else {
+      }
+      if (window.pageYOffset < 1535) {
         digit.style.display = "none";
         digit.classList.remove("active");
         here.style.display = "block";
@@ -124,12 +125,13 @@ window.addEventListener("load", () => {
     myFunction2();
     if (window.innerWidth > 900) {
       window.addEventListener("scroll", () => {
-        console.log("top", window.scrollY);
+        // console.log("top", window.scrollY);
         if (window.pageYOffset > 1875) {
           digit.style.display = "block";
           digit.classList.add("active");
           here.style.display = "none";
-        } else {
+        }
+        if (window.pageYOffset < 1875) {
           digit.style.display = "none";
           digit.classList.remove("active");
           here.style.display = "block";
@@ -143,7 +145,8 @@ window.addEventListener("load", () => {
           digit.style.display = "block";
           digit.classList.add("active");
           here.style.display = "none";
-        } else {
+        }
+        if (window.pageYOffset < 1855) {
           digit.style.display = "none";
           digit.classList.remove("active");
           here.style.display = "block";
@@ -158,7 +161,8 @@ window.addEventListener("load", () => {
           digit.style.display = "block";
           digit.classList.add("active");
           here.style.display = "none";
-        } else {
+        }
+        if (window.pageYOffset < 1500) {
           digit.style.display = "none";
           digit.classList.remove("active");
           here.style.display = "block";
@@ -173,7 +177,8 @@ window.addEventListener("load", () => {
           digit.style.display = "block";
           digit.classList.add("active");
           here.style.display = "none";
-        } else {
+        }
+        if (window.pageYOffset < 1320) {
           digit.style.display = "none";
           digit.classList.remove("active");
           here.style.display = "block";
