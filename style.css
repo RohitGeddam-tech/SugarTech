@@ -155,10 +155,57 @@ p {
 .App {
   width: 100%;
   overflow-x: hidden;
+  background-color: black;
+}
+
+.App.black {
+  background-color: black;
+  /* animation: black .5s forwards; */
+}
+
+.App.white {
+  background-color: white;
+  /* animation: white .5s forwards; */
+}
+
+.aactive {
+  color: black !important;
+}
+
+.inactive {
+  color: white !important;
+}
+
+.blackbord{
+  border-color: black !important;
+  color: black !important;
+}
+
+.whitebord{
+  border-color: white !important;
+  color: white !important;
+}
+
+@keyframes black {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+
+@keyframes white {
+  0% {
+    background-color: #000;
+  }
+  100% {
+    background-color: white;
+  }
 }
 
 .App .first {
-  background-color: black;
+  /* background-color: black; */
   /* height: 125vh; */
   width: 100%;
   position: relative;
@@ -558,7 +605,7 @@ p {
 
 .secondLast {
   width: 100%;
-  background-color: white;
+  /* background-color: white; */
   padding-bottom: 40px;
 }
 
@@ -658,7 +705,7 @@ p {
 
 .spotify {
   width: 100%;
-  background-color: black;
+  /* background-color: black; */
   padding: 100px 0;
 }
 
@@ -693,17 +740,35 @@ p {
 
 .spotForm .left {
   width: 50%;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 5px;
-  padding: 20px;
+  /* padding: 20px; */
+}
+
+.spotForm .left img {
+  width: 100%;
+  border-radius: 5px;
 }
 
 .spotForm .right {
-  width: 50%;
+  width: 46%;
   display: flex;
   flex-flow: column;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
+}
+
+.spotForm .right h1 {
+  margin-left: 0 !important;
+  width: fit-content !important;
+  margin-bottom: 20px !important;
+}
+
+.spotForm .right a {
+  font-family: "Metropolis";
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .spotForm .right .box {
@@ -714,27 +779,23 @@ p {
   margin: 30px 0;
 }
 
-.spotForm .right .box.two {
-  margin: 0;
-}
-
 .spotForm .right .box p {
   width: 120px;
   height: 33px;
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 20px;
   font-family: "Metropolis";
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
   background-color: transparent;
   color: white;
   font-weight: 400;
   font-style: normal;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   padding: 0 10px;
-  padding-left: 15px;
+  /* padding-left: 15px; */
   position: relative;
 }
 
@@ -743,165 +804,9 @@ p {
   right: 10px;
 }
 
-.spotForm .left .drop {
-  width: 50%;
-  margin-bottom: 15px;
-}
-
-.spotForm .left .drop .select {
-  width: 100%;
-  height: 30px;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.spotForm .left .drop .select .span {
-  font-family: "Metropolis";
-  font-size: 12px;
-  line-height: 12px;
-  background-color: transparent;
-  color: black;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.spotForm .left .drop .select img {
-  position: absolute;
-  right: 10px;
-  width: 18px;
-}
-
-.spotForm .left .drop .dropdownMenu {
-  display: none;
-}
-
-.spotForm .left .flexed {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.spotForm .left .flexed .textInput {
-  width: 42%;
-  position: relative;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 0 10px;
-}
-
-.spotForm .left .flexed .textInput input {
-  width: 100%;
-  height: 30px;
-  border: none;
-  outline: none;
-  font-family: "Metropolis";
-  font-size: 16px;
-  line-height: 18px;
-  background-color: transparent;
-  color: black;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.spotForm .left .flexed .textInput label {
-  position: absolute;
-  top: 8px;
-  font-family: "Metropolis";
-  font-size: 16px;
-  line-height: 18px;
-  background-color: transparent;
-  color: black;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.spotForm .left .checker,
-.spotForm .left .checker label {
-  font-family: "Metropolis";
-  font-size: 16px;
-  line-height: 18px;
-  background-color: transparent;
-  color: black;
-  font-weight: 400;
-  font-style: normal;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.spotForm .left .address {
-  width: 95.2%;
-  position: relative;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 15px;
-}
-
-.spotForm .left .address input {
-  width: 100%;
-  height: 30px;
-  border: none;
-  outline: none;
-  font-family: "Metropolis";
-  font-size: 16px;
-  line-height: 18px;
-  background-color: transparent;
-  color: black;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.spotForm .left .address label {
-  position: absolute;
-  top: 8px;
-  font-family: "Metropolis";
-  font-size: 16px;
-  line-height: 18px;
-  background-color: transparent;
-  color: black;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.spotForm .left .flexed .drop {
-  margin-bottom: 0;
-}
-
-.spotForm .left .three .textInput {
-  width: 27%;
-}
-
-.spotForm .left .three .drop {
-  width: 27%;
-}
-
-.spotForm .left .three .drop .select {
-  width: 90%;
-  margin-left: -8%;
-}
-
-.spotForm .left .three .date {
-  width: 30%;
-  /* padding: 4px 10px; */
-}
-
-.spotForm .left .three .date label {
-  top: -8px;
-  font-size: 9px;
-  background-color: white;
-  padding: 0 2px;
-  left: 6px;
-}
-
 .plaid {
   width: 100%;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .plaid .contain {
@@ -927,7 +832,8 @@ p {
 
 .plaid .contain .spotForm .left {
   border: 1px solid black;
-  box-shadow: 0 0 4px rgb(204, 204, 204);
+  border-color: transparent;
+  /* box-shadow: 0 0 4px rgb(204, 204, 204); */
 }
 
 .plaid .contain .spotForm .right .box p {
@@ -1045,12 +951,12 @@ p {
   top: 0;
   z-index: 90; */
   padding-bottom: 80px;
-  background-color: black;
+  /* background-color: black; */
 }
 
-.digit.active {
+/* .digit.active {
   animation: active 1s forwards;
-}
+} */
 
 .digit .contain {
   padding-top: 40px;
@@ -1235,6 +1141,12 @@ p {
   /* .first .contain .middle .right .partb img.lastGif{
     width: 100%;
   } */
+  .spotForm {
+    width: 90%;
+  }
+  .spotForm .right .box{
+    width: 80%;
+  }
 }
 
 /* for ipad */
@@ -1309,10 +1221,23 @@ p {
     width: 100%;
     order: 1;
   }
+  .spotify .contain .spotForm .right h1,
+  .plaid .contain .spotForm .right h1{
+    font-size: 45px;
+  }
+  .spotify .contain .spotForm .right a,
+  .plaid .contain .spotForm .right a{
+    font-size: 32px;
+  }
+  .spotify .contain .spotForm .right .box,
+  .plaid .contain .spotForm .right .box{
+    width: 320px;
+  }
   .spotify .contain .spotForm .left,
   .plaid .contain .spotForm .left {
-    width: 95%;
+    width: 100%;
     order: 2;
+    /* margin: 0 auto; */
     margin-top: 50px;
   }
   /* .spotify .contain .spotForm .right .box, .plaid .contain .spotForm .right .box{
@@ -1328,28 +1253,28 @@ p {
 
 /* for mobile devices */
 @media (max-width: 600px) {
-  .secondLast .contain{
+  .secondLast .contain {
     width: 92%;
   }
-  .secondLast .contain h1{
+  .secondLast .contain h1 {
     font-size: 20px;
     margin-bottom: 30px;
   }
-  .footer .contain{
+  .footer .contain {
     flex-flow: column;
   }
   .footer .contain .left {
     width: 100%;
     margin-bottom: 35px;
   }
-  .footer .contain .left p{
+  .footer .contain .left p {
     text-align: center;
   }
   .footer .contain .right {
     width: 50%;
     justify-content: space-between;
   }
-  .digit .contain{
+  .digit .contain {
     padding-top: 30px;
   }
   .spotify .contain .spotForm,
@@ -1366,7 +1291,7 @@ p {
     font-size: 20px;
     margin-bottom: 0;
   }
-  .secondComp .contain .paraImg img{
+  .secondComp .contain .paraImg img {
     display: none;
   }
   .secondComp .contain .paraImg p {
@@ -1403,6 +1328,7 @@ p {
   .digit .contain .shade.second .right .absolute {
     right: 0;
     width: 38%;
+    height: 140px;
     bottom: -50px;
   }
   .first .contain .middle .right .partb img.secondGif,
@@ -1410,29 +1336,38 @@ p {
   img.lastGif {
     width: 100% !important;
   }
-  .here .contain .mid{
+  .here .contain .mid {
     font-size: 24px;
   }
-  .spotify .contain .spotForm .right .box, .plaid .contain .spotForm .right .box{
+  .spotify .contain .spotForm .right .box,
+  .plaid .contain .spotForm .right .box {
     width: 90%;
     /* margin: 0;
     flex-flow: column; */
   }
-  .first .contain .middle .right .parta .set{
+  .first .contain .middle .right .parta .set {
     width: 100%;
   }
-  .first .contain .middle .right .parta .set p{
+  .first .contain .middle .right .parta .set p {
     font-size: 30px;
     width: 100%;
+  }
+  .spotify .contain .spotForm .right h1,
+  .plaid .contain .spotForm .right h1{
+    font-size: 35px;
+  }
+  .spotify .contain .spotForm .right a,
+  .plaid .contain .spotForm .right a{
+    font-size: 24px;
   }
 }
 
 /* for mobile devices */
 @media (max-width: 400px) {
-  .secondLast .contain{
+  .secondLast .contain {
     width: 92%;
   }
-  .secondLast .contain h1{
+  .secondLast .contain h1 {
     font-size: 18px;
     margin-bottom: 30px;
   }
@@ -1466,17 +1401,22 @@ p {
     width: 45%;
     height: 120px;
   }
-  .here .contain .mid{
+  .here .contain .mid {
     font-size: 24px;
   }
-  .spotify .contain .spotForm .right .box, .plaid .contain .spotForm .right .box{
+  .spotify .contain .spotForm .right .box,
+  .plaid .contain .spotForm .right .box {
     width: 100%;
   }
-  .first .contain .middle .right .parta .set{
+  .first .contain .middle .right .parta .set {
     width: 100%;
   }
-  .first .contain .middle .right .parta .set p{
+  .first .contain .middle .right .parta .set p {
     font-size: 30px;
+    width: 100%;
+  }
+  .spotify .contain .spotForm .right .box,
+  .plaid .contain .spotForm .right .box{
     width: 100%;
   }
 }
@@ -1485,5 +1425,8 @@ p {
 @media (min-width: 1510px) {
   .contain {
     width: 1209px !important;
+  }
+  .first .contain .middle .right .parta .set {
+    left: 0;
   }
 }

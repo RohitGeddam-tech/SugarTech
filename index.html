@@ -10,15 +10,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Sugar_trial</title>
   </head>
-  <body>
-    <div class="App">
+  <body id="body">
+    <div class="App" id="app">
       <div class="header">
         <div class="head">
           <p>Sugar<span>logger</span></p>
         </div>
       </div>
       <div class="first" id="firstComp">
-        <div class="contain">
+        <div class="contain" id="contain">
           <div class="middle">
             <div class="left" id="left">
               <div class="set">
@@ -171,8 +171,8 @@
                 </p>
               </div>
               <div class="right">
-                <img src="./image/web.jpeg" alt="display" />
-                <img src="./image/b.jpg" class="absolute" alt="display" />
+                <img src="./image/web.webp" alt="display" />
+                <img src="./image/b.webp" class="absolute" alt="display" />
               </div>
             </div>
             <div class="shade">
@@ -200,7 +200,7 @@
                 </p>
               </div>
               <div class="right">
-                <img src="./image/e.jpeg" alt="web-design" />
+                <img src="./image/e.webp" alt="web-design" />
               </div>
             </div>
             <div class="shade">
@@ -226,7 +226,7 @@
                 </p>
               </div>
               <div class="right">
-                <img src="./image/graph.jpeg" alt="graphic" />
+                <img src="./image/graph.webp" alt="graphic" />
               </div>
             </div>
             <div class="shade second">
@@ -253,8 +253,8 @@
                 </p>
               </div>
               <div class="right">
-                <img src="./image/c.jpeg" class="absolute1" alt="Development" />
-                <img src="./image/f.jpg" class="absolute" alt="display" />
+                <img src="./image/c.webp" class="absolute1" alt="Development" />
+                <img src="./image/f.webp" class="absolute" alt="display" />
               </div>
             </div>
             <div class="shade">
@@ -281,7 +281,7 @@
                 </p>
               </div>
               <div class="right">
-                <img src="./image/d.jpg" alt="media" />
+                <img src="./image/d.webp" alt="media" />
               </div>
             </div>
             <div class="shade">
@@ -298,7 +298,7 @@
                 </p>
               </div>
               <div class="right">
-                <img src="./image/a.jpeg" alt="ads" />
+                <img src="./image/a.webp" alt="ads" />
               </div>
             </div>
           </div>
@@ -312,128 +312,23 @@
           </h1>
           <div class="spotForm">
             <div class="left">
-              <div class="drop">
-                <div class="select">
-                  <span>Select Branch</span>
-                  <img src="./image/downArrow.png" alt="down" />
-                </div>
-                <input type="hidden" name="branch" />
-                <ul class="dropdownMenu">
-                  <li id="male">Male</li>
-                  <li id="female">Female</li>
-                </ul>
-              </div>
-              <div class="flexed">
-                <div class="textInput">
-                  <label for="mobile">Mobile No.</label>
-                  <input type="number" name="mobile" id="mobile" />
-                </div>
-                <div class="textInput">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" />
-                </div>
-              </div>
-              <div class="textInput checker">
-                <input type="checkbox" name="member" id="member" />
-                <label for="member">Add a new family member</label>
-              </div>
-              <div class="flexed">
-                <div class="textInput">
-                  <label for="fname">First Name</label>
-                  <input type="text" name="fname" id="fname" />
-                </div>
-                <div class="textInput">
-                  <label for="lname">last Name</label>
-                  <input type="text" name="lname" id="lname" />
-                </div>
-              </div>
-              <div class="textInput address">
-                <label for="address">Address <span>(options)</span></label>
-                <input type="text" name="address" id="address" />
-              </div>
-              <div class="flexed three">
-                <div class="textInput">
-                  <label for="pincode">Pincode</label>
-                  <input type="number" name="pincode" id="pincode" />
-                </div>
-                <div class="textInput">
-                  <label for="city">City</label>
-                  <input type="text" name="city" id="city" />
-                </div>
-                <div class="textInput">
-                  <label for="state">State</label>
-                  <input type="text" name="state" id="state" />
-                </div>
-              </div>
-              <div class="flexed three">
-                <div class="textInput date">
-                  <label for="date">Date of birth</label>
-                  <input type="date" name="date" id="date" />
-                </div>
-                <div class="drop">
-                  <div class="select">
-                    <span>Gender</span>
-                    <img src="./image/downArrow.png" alt="down" />
-                  </div>
-                  <input type="hidden" name="gender" />
-                  <ul class="dropdownMenu">
-                    <li id="male">Male</li>
-                    <li id="female">Female</li>
-                  </ul>
-                </div>
-                <div class="drop">
-                  <div class="select">
-                    <span>Blood Group</span>
-                    <img src="./image/downArrow.png" alt="down" />
-                  </div>
-                  <input type="hidden" name="blood" />
-                  <ul class="dropdownMenu">
-                    <li id="A+">A+</li>
-                    <li id="A-">A-</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="drop">
-                <div class="select">
-                  <span>Referal</span>
-                  <img src="./image/downArrow.png" alt="down" />
-                </div>
-                <input type="hidden" name="refer" />
-                <ul class="dropdownMenu">
-                  <li id="male">Male</li>
-                  <li id="female">Female</li>
-                </ul>
-              </div>
-              <!-- <img src="./image/Rectb.png" alt="form" /> -->
+              <img src="./image/Mirana.webp" alt="Mirana" />
             </div>
             <div class="right">
-              <img src="./image/spotify.png" alt="spotify" />
+              <h1>Mirana</h1>
+              <a href="http://www.mirana.com">www.mirana.com</a>
               <div class="box">
                 <p>
-                  Web Design
-                  <span>
+                  Digital Marketing
+                  <!-- <span>
                     <img src="./image/blackBook.png" alt="bookmark" />
-                  </span>
-                </p>
-                <p>
-                  Development
-                  <span>
-                    <img src="./image/blackBook.png" alt="bookmark" />
-                  </span>
-                </p>
-              </div>
-              <div class="box two">
-                <p>
-                  Development
-                  <span>
-                    <img src="./image/blackBook.png" alt="bookmark" />
-                  </span>
+                  </span> -->
                 </p>
                 <p>
                   Web Design
-                  <span>
+                  <!-- <span>
                     <img src="./image/blackBook.png" alt="bookmark" />
-                  </span>
+                  </span> -->
                 </p>
               </div>
             </div>
@@ -448,128 +343,85 @@
           </h1> -->
           <div class="spotForm">
             <div class="left">
-              <div class="drop">
-                <div class="select">
-                  <span>Select Branch</span>
-                  <img src="./image/downArrow.png" alt="down" />
-                </div>
-                <input type="hidden" name="branch" />
-                <ul class="dropdownMenu">
-                  <li id="male">Male</li>
-                  <li id="female">Female</li>
-                </ul>
-              </div>
-              <div class="flexed">
-                <div class="textInput">
-                  <label for="mobile">Mobile No.</label>
-                  <input type="number" name="mobile" id="mobile" />
-                </div>
-                <div class="textInput">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" />
-                </div>
-              </div>
-              <div class="textInput checker">
-                <input type="checkbox" name="member" id="member" />
-                <label for="member">Add a new family member</label>
-              </div>
-              <div class="flexed">
-                <div class="textInput">
-                  <label for="fname">First Name</label>
-                  <input type="text" name="fname" id="fname" />
-                </div>
-                <div class="textInput">
-                  <label for="lname">last Name</label>
-                  <input type="text" name="lname" id="lname" />
-                </div>
-              </div>
-              <div class="textInput address">
-                <label for="address">Address <span>(options)</span></label>
-                <input type="text" name="address" id="address" />
-              </div>
-              <div class="flexed three">
-                <div class="textInput">
-                  <label for="pincode">Pincode</label>
-                  <input type="number" name="pincode" id="pincode" />
-                </div>
-                <div class="textInput">
-                  <label for="city">City</label>
-                  <input type="text" name="city" id="city" />
-                </div>
-                <div class="textInput">
-                  <label for="state">State</label>
-                  <input type="text" name="state" id="state" />
-                </div>
-              </div>
-              <div class="flexed three">
-                <div class="textInput date">
-                  <label for="date">Date of birth</label>
-                  <input type="date" name="date" id="date" />
-                </div>
-                <div class="drop">
-                  <div class="select">
-                    <span>Gender</span>
-                    <img src="./image/downArrow.png" alt="down" />
-                  </div>
-                  <input type="hidden" name="gender" />
-                  <ul class="dropdownMenu">
-                    <li id="male">Male</li>
-                    <li id="female">Female</li>
-                  </ul>
-                </div>
-                <div class="drop">
-                  <div class="select">
-                    <span>Blood Group</span>
-                    <img src="./image/downArrow.png" alt="down" />
-                  </div>
-                  <input type="hidden" name="blood" />
-                  <ul class="dropdownMenu">
-                    <li id="A+">A+</li>
-                    <li id="A-">A-</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="drop">
-                <div class="select">
-                  <span>Referal</span>
-                  <img src="./image/downArrow.png" alt="down" />
-                </div>
-                <input type="hidden" name="refer" />
-                <ul class="dropdownMenu">
-                  <li id="male">Male</li>
-                  <li id="female">Female</li>
-                </ul>
-              </div>
-              <!-- <img src="./image/Rectb.png" alt="form" /> -->
+              <img src="./image/mjunction.webp" alt="Mjunction" />
             </div>
             <div class="right">
-              <img src="./image/plaid.png" alt="plaid" />
+              <h1 id="junc">Mjunction</h1>
+              <a href="http://www.mjunction.com">www.mjunction.com</a>
               <div class="box">
-                <p>
-                  Web Design
-                  <span>
-                    <img src="./image/whiteBook.png" alt="bookmark" />
-                  </span>
+                <p id="junc1">
+                  Digital Marketing
+                  <!-- <span>
+                    <img src="./image/blackBook.png" alt="bookmark" />
+                  </span> -->
                 </p>
-                <p>
-                  Development
-                  <span>
-                    <img src="./image/whiteBook.png" alt="bookmark" />
-                  </span>
+                <p id="junc2">
+                  Web Design
+                  <!-- <span>
+                    <img src="./image/blackBook.png" alt="bookmark" />
+                  </span> -->
                 </p>
               </div>
-              <div class="box two">
-                <p>
-                  Development
-                  <span>
-                    <img src="./image/whiteBook.png" alt="bookmark" />
-                  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spotify">
+        <div class="contain">
+          <!-- <h1>
+            Having worked with clients from various fields, you can trust us to
+            get the job done.
+          </h1> -->
+          <div class="spotForm">
+            <div class="left">
+              <img src="./image/xxwatts.webp" alt="20watts" />
+            </div>
+            <div class="right">
+              <h1 id="watt">20watts</h1>
+              <a href="http://www.20watts.com">www.20watts.com</a>
+              <div class="box">
+                <p id="watt1">
+                  Digital Marketing
+                  <!-- <span>
+                    <img src="./image/blackBook.png" alt="bookmark" />
+                  </span> -->
                 </p>
-                <p>
+                <p id="watt2">
                   Web Design
-                  <span>
-                    <img src="./image/whiteBook.png" alt="bookmark" />
-                  </span>
+                  <!-- <span>
+                    <img src="./image/blackBook.png" alt="bookmark" />
+                  </span> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plaid">
+        <div class="contain">
+          <!-- <h1>
+            Having worked with clients from various fields, you can trust us to
+            get the job done.
+          </h1> -->
+          <div class="spotForm">
+            <div class="left">
+              <img src="./image/Shycosafe.webp" alt="Shycosafe" />
+            </div>
+            <div class="right">
+              <h1 id="safe">Shycosafe</h1>
+              <a href="http://www.Shycosafe.com">www.Shycosafe.com</a>
+              <div class="box">
+                <p id="safe1">
+                  Digital Marketing
+                  <!-- <span>
+                    <img src="./image/blackBook.png" alt="bookmark" />
+                  </span> -->
+                </p>
+                <p id="safe2">
+                  Web Design
+                  <!-- <span>
+                    <img src="./image/blackBook.png" alt="bookmark" />
+                  </span> -->
                 </p>
               </div>
             </div>
@@ -578,7 +430,7 @@
       </div>
       <div class="secondLast">
         <div class="contain">
-          <h1>
+          <h1 id="secondLast">
             Each Project is lead by our CTO, with a uniquely assembled team of
             amazing designers, developers, and specialists depending on your
             needs.
