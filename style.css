@@ -186,6 +186,14 @@ p {
   color: white !important;
 }
 
+.hide {
+  display: none !important;
+}
+
+.on{
+  display: block !important;
+}
+
 @keyframes black {
   0% {
     background-color: #fff;

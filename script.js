@@ -73,7 +73,7 @@ window.addEventListener("load", () => {
       //   console.log(document.body.scrollHeight);
       //   console.log("top", document.documentElement.scrollTop);
       // console.log("top", window.scrollY);
-      console.log("top", window.pageYOffset);
+      // console.log("top", window.pageYOffset);
 
       if (window.pageYOffset < 1140) {
         app.classList.add("black");
@@ -197,26 +197,27 @@ window.addEventListener("load", () => {
       } else {
         scrolled.style.opacity = "1";
       }
-      if (window.pageYOffset > 1535) {
-        digit.style.display = "block";
-        digit.classList.add("active");
-        here.style.display = "none";
-      }
-      if (window.pageYOffset < 1535) {
-        digit.style.display = "none";
-        digit.classList.remove("active");
-        here.style.display = "block";
-      }
+      // if (window.pageYOffset > 1535) {
+      //   digit.style.display = "block";
+      //   digit.classList.add("active");
+      //   here.style.display = "none";
+      // }
+      // if (window.pageYOffset < 1535) {
+      //   digit.style.display = "none";
+      //   digit.classList.remove("active");
+      //   here.style.display = "block";
+      // }
       // leftDiv.style.top = `${window.pageYOffset}`;
     });
   } else {
     myFunction3();
     myFunction();
     myFunction2();
+    // ipadPro(app,junc, junc1, junc2, watt2, watt1, watt, safe, safe1, safe2, digit, here);
     if (window.innerWidth > 900) {
       window.addEventListener("scroll", () => {
         // console.log(900);
-        console.log("top", window.pageYOffset);
+        // console.log("top", window.pageYOffset);
 
         if (window.pageYOffset < 1380) {
           app.classList.add("black");
@@ -309,23 +310,23 @@ window.addEventListener("load", () => {
           last2.classList.add("aactive");
         }
 
-        if (window.pageYOffset > 1875) {
-          digit.style.display = "block";
-          digit.classList.add("active");
-          here.style.display = "none";
-        }
-        if (window.pageYOffset < 1875) {
-          digit.style.display = "none";
-          digit.classList.remove("active");
-          here.style.display = "block";
-        }
+        // if (window.pageYOffset > 1875) {
+        //   digit.style.display = "block";
+        //   digit.classList.add("active");
+        //   here.style.display = "none";
+        // }
+        // if (window.pageYOffset < 1875) {
+        //   digit.style.display = "none";
+        //   digit.classList.remove("active");
+        //   here.style.display = "block";
+        // }
       });
     }
     if (window.innerWidth < 900) {
       window.addEventListener("scroll", () => {
         // console.log(900);
         // console.log(window.innerWidth);
-        console.log("top", window.scrollY);
+        // console.log("top", window.scrollY);
 
         if (window.pageYOffset < 1280) {
           app.classList.add("black");
@@ -418,17 +419,17 @@ window.addEventListener("load", () => {
           last2.classList.add("aactive");
         }
 
-        if (window.pageYOffset > 1855) {
-          digit.style.display = "block";
-          digit.classList.add("active");
-          here.style.display = "none";
-        }
-        // setTimeout(function () {
-        if (window.pageYOffset < 1855) {
-          digit.style.display = "none";
-          digit.classList.remove("active");
-          here.style.display = "block";
-        }
+        // if (window.pageYOffset > 1855) {
+        //   digit.style.display = "block";
+        //   digit.classList.add("active");
+        //   here.style.display = "none";
+        // }
+        // // setTimeout(function () {
+        // if (window.pageYOffset < 1855) {
+        //   digit.style.display = "none";
+        //   digit.classList.remove("active");
+        //   here.style.display = "block";
+        // }
         // }, 1000);
       });
     }
@@ -437,18 +438,18 @@ window.addEventListener("load", () => {
       window.addEventListener("scroll", () => {
         // console.log(600);
         // console.log(window.innerWidth);
-        console.log("top", window.scrollY);
-        if (window.pageYOffset > 1470) {
-          digit.style.display = "block";
-          digit.classList.add("active");
-          here.style.display = "none";
-        }
-        // setTimeout(function () {
-        if (window.pageYOffset < 1470) {
-          digit.style.display = "none";
-          digit.classList.remove("active");
-          here.style.display = "block";
-        }
+        // console.log("top", window.scrollY);
+        // if (window.pageYOffset > 1470) {
+        //   digit.style.display = "block";
+        //   digit.classList.add("active");
+        //   here.style.display = "none";
+        // }
+        // // setTimeout(function () {
+        // if (window.pageYOffset < 1470) {
+        //   digit.style.display = "none";
+        //   digit.classList.remove("active");
+        //   here.style.display = "block";
+        // }
         // }, 1000);
 
         if (window.pageYOffset < 1000) {
@@ -549,17 +550,17 @@ window.addEventListener("load", () => {
         // console.log(400);
         // console.log(window.innerWidth);
         // console.log("top", window.scrollY);
-        if (window.pageYOffset > 1320) {
-          digit.style.display = "block";
-          digit.classList.add("active");
-          here.style.display = "none";
-        }
-        // setTimeout(function () {
-        if (window.pageYOffset < 1320) {
-          digit.style.display = "none";
-          digit.classList.remove("active");
-          here.style.display = "block";
-        }
+        // if (window.pageYOffset > 1320) {
+        //   digit.style.display = "block";
+        //   digit.classList.add("active");
+        //   here.style.display = "none";
+        // }
+        // // setTimeout(function () {
+        // if (window.pageYOffset < 1320) {
+        //   digit.style.display = "none";
+        //   digit.classList.remove("active");
+        //   here.style.display = "block";
+        // }
         // }, 1000);
         if (window.pageYOffset < 1000) {
           app.classList.add("black");
@@ -728,4 +729,100 @@ window.addEventListener("load", () => {
   //       time
   //     );
   // }
+});
+
+digit.classList.remove("active");
+
+function isBetween(range) {
+  var screenWidth = window.innerWidth;
+  var min = Math.min.apply(screenWidth, range);
+  var max = Math.max.apply(screenWidth, range);
+  return screenWidth > min && screenWidth < max;
+}
+
+function widthToOffset() {
+  //   Hard coding px width & px yOffset values is a bad practice
+  var resultIndex;
+  var windowSizes = [
+    [0, 400],
+    [401, 600],
+    [601, 900],
+    [901, 1100],
+    [1100, 2600],
+  ];
+  var offsets = [1320, 1470, 1855, 1875, 1535];
+
+  windowSizes.forEach(function (eachSize, index) {
+    if (isBetween(eachSize)) {
+      resultIndex = index;
+    }
+  });
+
+  return offsets[resultIndex];
+}
+
+// function widthToOffset() {
+//   //   Hard coding px width & px yOffset values is a bad practice
+//   var resultIndex;
+//   var windowSizes = [
+//     [0, 400],
+//     [401, 600],
+//     [601, 900],
+//     [901, 1100],
+//     [1100, 2600],
+//   ];
+//   var offsets = [1320, 1470, 1855, 1875, 1535];
+
+//   windowSizes.forEach(function (eachSize, index) {
+//     if (isBetween(eachSize)) {
+//       resultIndex = index;
+//     }
+//   });
+
+//   return offsets[resultIndex];
+// }
+
+var animate = {
+  in: function () {
+    digit.classList.remove("hide");
+    digit.classList.add("on");
+    here.classList.add("hide");
+    here.classList.remove("on");
+  },
+  out: function () {
+    digit.classList.add("hide");
+    digit.classList.remove("on");
+    here.classList.remove("hide");
+    here.classList.add("on");
+  },
+  // white: () => {
+  //   app.classList.add("white");
+  //   app.classList.remove("black");
+  // },
+  // black: () => {
+  //   app.classList.remove("white");
+  //   app.classList.add("black");
+  // },
+};
+
+function yOffsetHandler() {
+  if (window.pageYOffset > changeOffset) {
+    animate.in();
+  } else {
+    animate.out();
+  }
+}
+
+var changeOffset;
+
+window.addEventListener("load", function () {
+  changeOffset = widthToOffset();
+});
+
+window.addEventListener("resize", function () {
+  changeOffset = widthToOffset();
+});
+
+window.addEventListener("scroll", function (e) {
+  yOffsetHandler();
 });
