@@ -160,11 +160,13 @@ p {
 
 .App.black {
   background-color: black;
+  transition: all .8s ease-in-out;
   /* animation: black .5s forwards; */
 }
 
 .App.white {
   background-color: white;
+  transition: all .8s ease-in-out;
   /* animation: white .5s forwards; */
 }
 
