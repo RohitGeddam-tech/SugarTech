@@ -15,7 +15,7 @@ const aDiv = document.getElementById("parta");
 const scrolled = document.getElementById("bottomScroll");
 const digit = document.getElementById("digit");
 const shade = document.getElementById("shade");
-const here = document.getElementById("here");
+// const here = document.getElementById("here");
 const white = document.getElementById("whiteBtn");
 const white2 = document.getElementById("whiteBtn2");
 const blackBtn = document.getElementById("blackBtn");
@@ -34,6 +34,11 @@ const watt2 = document.getElementById("watt2");
 const safe2 = document.getElementById("safe2");
 const junc2 = document.getElementById("junc2");
 const last2 = document.getElementById("secondLast");
+
+var here = document.getElementById("cerckleAnimMain");
+var rightBoxesRef = document.getElementById("rightBoxesRef");
+var leftBoxesRef = document.getElementById("leftBoxesRef");
+var blackCerckle = document.getElementById("blackCerckle");
 
 window.addEventListener("load", () => {
   // console.warn("left bound: ",leftDiv.getBoundingClientRect().top);
@@ -67,6 +72,31 @@ window.addEventListener("load", () => {
     }, 10000);
   }
 
+  window.addEventListener("scroll", () => {
+    var scaleAsp =
+      document.documentElement.scrollTop -
+      here.getBoundingClientRect().top -
+      900;
+    if (
+      document.documentElement.scrollTop >
+      cerckleAnimMain.getBoundingClientRect().top + 300
+    ) {
+      leftBoxesRef.style.transform =
+        "translateY(" + here.getBoundingClientRect().top * 2 + "px)";
+      rightBoxesRef.style.transform =
+        "translateY(-" + here.getBoundingClientRect().top * 2 + "px)";
+    }
+    if (
+      document.documentElement.scrollTop >
+      here.getBoundingClientRect().top + 900
+    ) {
+      blackCerckle.style.transform =
+        "scale(" + scaleAsp + ", " + scaleAsp + ")";
+    } else {
+      blackCerckle.style.transform = "scale(0,0)";
+    }
+  });
+
   if (window.innerWidth > 1100) {
     window.addEventListener("scroll", () => {
       // console.log("last img", leftDiv.getBoundingClientRect().bottom);
@@ -75,17 +105,23 @@ window.addEventListener("load", () => {
       // console.log("top", window.scrollY);
       // console.log("top", window.pageYOffset);
 
+      // if (scaleAsp > window.innerWidth + 40) {
+      //   blackCerckle.style.opacity = "0";
+      // } else {
+      //   blackCerckle.style.opacity = "1";
+      // }
+
       if (window.pageYOffset < 1140) {
         app.classList.add("black");
         app.classList.remove("white");
       }
 
-      if (window.pageYOffset > 1140 && window.pageYOffset < 1535) {
+      if (window.pageYOffset > 1140 && window.pageYOffset < 2035) {
         app.classList.add("white");
         app.classList.remove("black");
       }
 
-      if (window.pageYOffset > 1535 && window.pageYOffset < 4680) {
+      if (window.pageYOffset > 2035 && window.pageYOffset < 5680) {
         app.classList.add("black");
         app.classList.remove("white");
         junc.classList.add("inactive");
@@ -98,7 +134,7 @@ window.addEventListener("load", () => {
         watt.classList.remove("aactive");
       }
 
-      if (window.pageYOffset > 4680 && window.pageYOffset < 5350) {
+      if (window.pageYOffset > 5680 && window.pageYOffset < 5950) {
         app.classList.add("white");
         app.classList.remove("black");
         junc.classList.add("aactive");
@@ -119,7 +155,7 @@ window.addEventListener("load", () => {
         safe2.classList.remove("whitebord");
       }
 
-      if (window.pageYOffset > 5350 && window.pageYOffset < 5960) {
+      if (window.pageYOffset > 5950 && window.pageYOffset < 6760) {
         app.classList.add("black");
         app.classList.remove("white");
         junc.classList.add("aactive");
@@ -141,7 +177,7 @@ window.addEventListener("load", () => {
         safe2.classList.remove("blackbord");
         safe2.classList.add("whitebord");
       }
-      if (window.pageYOffset > 5960) {
+      if (window.pageYOffset > 6760) {
         app.classList.add("white");
         app.classList.remove("black");
         safe.classList.add("aactive");
@@ -197,39 +233,24 @@ window.addEventListener("load", () => {
       } else {
         scrolled.style.opacity = "1";
       }
-      // if (window.pageYOffset > 1535) {
-      //   digit.style.display = "block";
-      //   digit.classList.add("active");
-      //   here.style.display = "none";
-      // }
-      // if (window.pageYOffset < 1535) {
-      //   digit.style.display = "none";
-      //   digit.classList.remove("active");
-      //   here.style.display = "block";
-      // }
-      // leftDiv.style.top = `${window.pageYOffset}`;
     });
   } else {
     myFunction3();
     myFunction();
     myFunction2();
-    // ipadPro(app,junc, junc1, junc2, watt2, watt1, watt, safe, safe1, safe2, digit, here);
     if (window.innerWidth > 900) {
       window.addEventListener("scroll", () => {
-        // console.log(900);
-        // console.log("top", window.pageYOffset);
-
         if (window.pageYOffset < 1380) {
           app.classList.add("black");
           app.classList.remove("white");
         }
 
-        if (window.pageYOffset > 1380 && window.pageYOffset < 1875) {
+        if (window.pageYOffset > 1380 && window.pageYOffset < 2505) {
           app.classList.add("white");
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 1875 && window.pageYOffset < 5680) {
+        if (window.pageYOffset > 2505 && window.pageYOffset < 6280) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
@@ -246,7 +267,7 @@ window.addEventListener("load", () => {
           watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 5680 && window.pageYOffset < 6210) {
+        if (window.pageYOffset > 6280 && window.pageYOffset < 6710) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -269,7 +290,7 @@ window.addEventListener("load", () => {
           safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 6210 && window.pageYOffset < 6560) {
+        if (window.pageYOffset > 6710 && window.pageYOffset < 7260) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -293,7 +314,7 @@ window.addEventListener("load", () => {
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
-        if (window.pageYOffset > 6560) {
+        if (window.pageYOffset > 7260) {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
@@ -309,25 +330,11 @@ window.addEventListener("load", () => {
           last2.classList.remove("inactive");
           last2.classList.add("aactive");
         }
-
-        // if (window.pageYOffset > 1875) {
-        //   digit.style.display = "block";
-        //   digit.classList.add("active");
-        //   here.style.display = "none";
-        // }
-        // if (window.pageYOffset < 1875) {
-        //   digit.style.display = "none";
-        //   digit.classList.remove("active");
-        //   here.style.display = "block";
-        // }
       });
     }
     if (window.innerWidth < 900) {
       window.addEventListener("scroll", () => {
-        // console.log(900);
-        // console.log(window.innerWidth);
-        // console.log("top", window.scrollY);
-
+        console.log(window.pageYOffset);
         if (window.pageYOffset < 1280) {
           app.classList.add("black");
           app.classList.remove("white");
@@ -338,7 +345,7 @@ window.addEventListener("load", () => {
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 1855 && window.pageYOffset < 7310) {
+        if (window.pageYOffset > 1855 && window.pageYOffset < 7610) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
@@ -355,7 +362,7 @@ window.addEventListener("load", () => {
           watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 7310 && window.pageYOffset < 8210) {
+        if (window.pageYOffset > 7610 && window.pageYOffset < 8610) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -378,7 +385,7 @@ window.addEventListener("load", () => {
           safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 8210 && window.pageYOffset < 9210) {
+        if (window.pageYOffset > 8610 && window.pageYOffset < 9610) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -402,7 +409,7 @@ window.addEventListener("load", () => {
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
-        if (window.pageYOffset > 9210) {
+        if (window.pageYOffset > 9610) {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
@@ -418,51 +425,22 @@ window.addEventListener("load", () => {
           last2.classList.remove("inactive");
           last2.classList.add("aactive");
         }
-
-        // if (window.pageYOffset > 1855) {
-        //   digit.style.display = "block";
-        //   digit.classList.add("active");
-        //   here.style.display = "none";
-        // }
-        // // setTimeout(function () {
-        // if (window.pageYOffset < 1855) {
-        //   digit.style.display = "none";
-        //   digit.classList.remove("active");
-        //   here.style.display = "block";
-        // }
-        // }, 1000);
       });
     }
     if (window.innerWidth < 600) {
       thirdImg.src = "./image/design.gif";
       window.addEventListener("scroll", () => {
-        // console.log(600);
-        // console.log(window.innerWidth);
-        // console.log("top", window.scrollY);
-        // if (window.pageYOffset > 1470) {
-        //   digit.style.display = "block";
-        //   digit.classList.add("active");
-        //   here.style.display = "none";
-        // }
-        // // setTimeout(function () {
-        // if (window.pageYOffset < 1470) {
-        //   digit.style.display = "none";
-        //   digit.classList.remove("active");
-        //   here.style.display = "block";
-        // }
-        // }, 1000);
-
         if (window.pageYOffset < 1000) {
           app.classList.add("black");
           app.classList.remove("white");
         }
 
-        if (window.pageYOffset > 1000 && window.pageYOffset < 1470) {
+        if (window.pageYOffset > 1000 && window.pageYOffset < 1670) {
           app.classList.add("white");
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 1470 && window.pageYOffset < 6440) {
+        if (window.pageYOffset > 1670 && window.pageYOffset < 6840) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
@@ -479,7 +457,7 @@ window.addEventListener("load", () => {
           watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 6440 && window.pageYOffset < 7210) {
+        if (window.pageYOffset > 6840 && window.pageYOffset < 7610) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -502,7 +480,7 @@ window.addEventListener("load", () => {
           safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 7210 && window.pageYOffset < 8010) {
+        if (window.pageYOffset > 7610 && window.pageYOffset < 8410) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -526,7 +504,7 @@ window.addEventListener("load", () => {
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
-        if (window.pageYOffset > 8010) {
+        if (window.pageYOffset > 8410) {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
@@ -547,32 +525,17 @@ window.addEventListener("load", () => {
     if (window.innerWidth < 400) {
       thirdImg.src = "./image/design.gif";
       window.addEventListener("scroll", () => {
-        // console.log(400);
-        // console.log(window.innerWidth);
-        // console.log("top", window.scrollY);
-        // if (window.pageYOffset > 1320) {
-        //   digit.style.display = "block";
-        //   digit.classList.add("active");
-        //   here.style.display = "none";
-        // }
-        // // setTimeout(function () {
-        // if (window.pageYOffset < 1320) {
-        //   digit.style.display = "none";
-        //   digit.classList.remove("active");
-        //   here.style.display = "block";
-        // }
-        // }, 1000);
         if (window.pageYOffset < 1000) {
           app.classList.add("black");
           app.classList.remove("white");
         }
 
-        if (window.pageYOffset > 1000 && window.pageYOffset < 1320) {
+        if (window.pageYOffset > 1000 && window.pageYOffset < 1620) {
           app.classList.add("white");
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 1320 && window.pageYOffset < 6340) {
+        if (window.pageYOffset > 1620 && window.pageYOffset < 6740) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
@@ -589,7 +552,7 @@ window.addEventListener("load", () => {
           watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 6340 && window.pageYOffset < 7110) {
+        if (window.pageYOffset > 6740 && window.pageYOffset < 7510) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -612,7 +575,7 @@ window.addEventListener("load", () => {
           safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 7110 && window.pageYOffset < 7910) {
+        if (window.pageYOffset > 7510 && window.pageYOffset < 8310) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -636,7 +599,7 @@ window.addEventListener("load", () => {
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
-        if (window.pageYOffset > 7910) {
+        if (window.pageYOffset > 8310) {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
@@ -662,15 +625,15 @@ window.addEventListener("load", () => {
     leftDiv.style.left = `${container.left}px`;
   }
 
-  if ((digit.style.display = "block")) {
-    setTimeout(() => {
-      shade.classList.add("active");
-      // here.style.display = "none";
-    }, 300);
-  } else {
-    shade.classList.remove("active");
-    // here.style.display = "block";
-  }
+  // if ((digit.style.opacity = "1")) {
+  //   setTimeout(() => {
+  //     shade.classList.add("active");
+  //     // here.style.display = "none";
+  //   }, 2000);
+  // } else {
+  //   shade.classList.remove("active");
+  //   // here.style.display = "block";
+  // }
 
   white.addEventListener("mouseenter", () => {
     text.innerHTML = "";
@@ -740,6 +703,9 @@ function isBetween(range) {
   return screenWidth > min && screenWidth < max;
 }
 
+//link ka color baat kr.
+//animation to black and white background.
+
 function widthToOffset() {
   //   Hard coding px width & px yOffset values is a bad practice
   var resultIndex;
@@ -750,7 +716,7 @@ function widthToOffset() {
     [901, 1100],
     [1100, 2600],
   ];
-  var offsets = [1320, 1470, 1855, 1875, 1535];
+  var offsets = [1720, 1870, 2255, 2475, 2135];
 
   windowSizes.forEach(function (eachSize, index) {
     if (isBetween(eachSize)) {
@@ -761,26 +727,26 @@ function widthToOffset() {
   return offsets[resultIndex];
 }
 
-// function widthToOffset() {
-//   //   Hard coding px width & px yOffset values is a bad practice
-//   var resultIndex;
-//   var windowSizes = [
-//     [0, 400],
-//     [401, 600],
-//     [601, 900],
-//     [901, 1100],
-//     [1100, 2600],
-//   ];
-//   var offsets = [1320, 1470, 1855, 1875, 1535];
+function shadeOffset() {
+  //   Hard coding px width & px yOffset values is a bad practice
+  var resultIndex;
+  var windowSizes = [
+    [0, 400],
+    [401, 600],
+    [601, 900],
+    [901, 1100],
+    [1100, 2600],
+  ];
+  var offsets = [1720, 1970, 2355, 2775, 2335];
 
-//   windowSizes.forEach(function (eachSize, index) {
-//     if (isBetween(eachSize)) {
-//       resultIndex = index;
-//     }
-//   });
+  windowSizes.forEach(function (eachSize, index) {
+    if (isBetween(eachSize)) {
+      resultIndex = index;
+    }
+  });
 
-//   return offsets[resultIndex];
-// }
+  return offsets[resultIndex];
+}
 
 var animate = {
   in: function () {
@@ -795,14 +761,12 @@ var animate = {
     here.classList.remove("hide");
     here.classList.add("on");
   },
-  // white: () => {
-  //   app.classList.add("white");
-  //   app.classList.remove("black");
-  // },
-  // black: () => {
-  //   app.classList.remove("white");
-  //   app.classList.add("black");
-  // },
+  shade_in: function () {
+    shade.classList.add("active");
+  },
+  shade_out: function () {
+    shade.classList.remove("active");
+  },
 };
 
 function yOffsetHandler() {
@@ -810,6 +774,11 @@ function yOffsetHandler() {
     animate.in();
   } else {
     animate.out();
+  }
+  if (window.pageYOffset > activeOffset) {
+    animate.shade_in();
+  } else {
+    animate.shade_out();
   }
 }
 
@@ -821,6 +790,14 @@ window.addEventListener("load", function () {
 
 window.addEventListener("resize", function () {
   changeOffset = widthToOffset();
+});
+
+window.addEventListener("load", function () {
+  activeOffset = shadeOffset();
+});
+
+window.addEventListener("resize", function () {
+  activeOffset = shadeOffset();
 });
 
 window.addEventListener("scroll", function (e) {
