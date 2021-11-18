@@ -160,13 +160,13 @@ p {
 
 .App.black {
   background-color: black;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
   /* animation: black .5s forwards; */
 }
 
 .App.white {
   background-color: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
   /* animation: white .5s forwards; */
 }
 
@@ -256,21 +256,16 @@ p {
   color: white;
 }
 
+span.normal {
+  color: white !important;
+}
+
 .middle {
   width: 100%;
   position: relative;
   padding-top: 50px;
   display: flex;
   height: 730px;
-}
-
-.middle .left {
-  position: fixed;
-  width: 46%;
-  height: 400px;
-  top: 100px;
-  left: 8%;
-  z-index: 80;
 }
 
 .whiteBtn {
@@ -360,67 +355,6 @@ p {
   color: white;
 }
 
-.middle .left .set {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  /* align-items: center; */
-  justify-content: space-between;
-}
-
-.middle .left .set .bottomScroll {
-  position: absolute;
-  bottom: -140px;
-  padding-left: 2px;
-}
-
-.middle .left .set .bottomScroll p {
-  font-family: "Metropolis";
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 14px;
-  color: white;
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-}
-
-.middle .left .set .bottomScroll p span {
-  width: 30px;
-  height: 15px;
-  margin-right: 10px;
-}
-
-.middle .left .set .bottomScroll p span img {
-  width: 30px;
-  height: 15px;
-}
-
-.middle .left .set p {
-  margin: 20px 0;
-  max-width: 500px;
-  font-family: "Metropolis";
-  font-size: 45px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 54px;
-  color: white;
-  margin-top: 50px;
-}
-
-.middle .left .set p span.blocked {
-  display: block;
-}
-.middle .left .set p span.greyish {
-  color: #7d7c81;
-  /* animation: reverse 5s forwards; */
-}
-
-.middle .left .set p span.greyish .active {
-  /* animation: grey 5s forwards; */
-  color: #df5851;
-}
 
 .middle .right h1 {
   color: white;
@@ -428,19 +362,17 @@ p {
 
 .middle .right .parta {
   width: 50%;
-  opacity: 0;
-  margin-left: -1%;
+  opacity: 1;
+  /* margin-left: -1%; */
 }
 
 .middle .right .parta .set {
   width: 100%;
   display: flex;
   flex-flow: column;
-  position: absolute;
-  bottom: 250px;
-  /* align-items: center; */
   justify-content: space-between;
-  left: 4.45%;
+  margin-left: 4.5%;
+  margin-top: 50px;
 }
 
 .middle .right .parta .set .bottomScroll {
@@ -479,7 +411,7 @@ p {
   font-size: 45px;
   font-style: normal;
   font-weight: 600;
-  line-height: 54px;
+  line-height: 64px;
   color: white;
   margin-top: 50px;
 }
@@ -506,21 +438,21 @@ p {
 }
 
 .middle .right .partb img.firstGif {
-  position: fixed;
+  position: absolute;
   display: none;
   width: 650px;
   /* margin-bottom: 40px; */
-  margin-top: -90px;
+  margin-top: -140px;
   margin-left: -90px;
   /* top: 0px; */
 }
 
 .middle .right .partb img.secondGif {
-  position: fixed;
+  position: absolute;
   /* display: none; */
   width: 1100px;
   margin-bottom: 40px;
-  margin-top: -70px;
+  margin-top: -100px;
   margin-left: -350px;
 }
 
@@ -529,7 +461,7 @@ p {
   display: none;
   width: 1100px;
   margin-bottom: 40px;
-  margin-top: -90px;
+  margin-top: -120px;
   margin-left: -350px;
 }
 
@@ -906,22 +838,22 @@ p {
   margin-bottom: 40px;
 } */
 
-.clearFix{
+.clearFix {
   clear: both;
 }
-.cerckleAnimMain{
+.cerckleAnimMain {
   background-color: #fff;
 }
-.cerckleAnim{
+.cerckleAnim {
   width: 90%;
   margin: 0 auto;
   z-index: -1;
 }
-.leftBoxes{
+.leftBoxes {
   width: 31%;
   float: left;
 }
-.rightBoxes{
+.rightBoxes {
   width: 31%;
   float: right;
   transition: all 0s ease-in-out;
@@ -936,7 +868,7 @@ p {
   margin-bottom: 20px;
 }
 
-.blackCerckleMain{
+.blackCerckleMain {
   width: 100%;
   /* height: 100vh; */
   position: relative;
@@ -944,7 +876,7 @@ p {
   left: 50%;
 }
 
-#blackCerckle{
+#blackCerckle {
   width: 1px;
   height: 1px;
   border-radius: 50%;
@@ -953,12 +885,12 @@ p {
   margin-top: 50%;
   z-index: 0;
 }
-.asp{
+.asp {
   position: relative;
   /* height: 100vh; */
   overflow: hidden;
 }
-.midLine{
+.midLine {
   top: 25%;
   width: 90%;
   position: absolute;
@@ -968,10 +900,9 @@ p {
   color: #111111;
   text-align: center;
 }
-.midLine h2{
+.midLine h2 {
   text-align: center !important;
 }
-
 
 .here .contain .right {
   width: 31%;
@@ -1039,7 +970,7 @@ p {
   /* position: absolute;
   top: 0;*/
   opacity: 1;
-  z-index: 90; 
+  z-index: 90;
   padding-bottom: 80px;
   margin-top: -450px;
   /* background-color: black; */
@@ -1055,15 +986,16 @@ p {
   height: max-content;
   width: 92%;
   margin: 0 auto;
-  z-index: 90; 
+  z-index: 90;
   opacity: 0;
   /* padding-top: 700px; */
 }
 
 .digit .contain.active {
-  animation: inactive 1.5s forwards;
-  transition: all .8s ease-in-out;
-  z-index: 90; 
+  /* animation: inactive 1.5s forwards; */
+  animation: 0.5s linear 0.3s inactive forwards;
+  transition: all 0.8s ease-in-out;
+  z-index: 90;
 }
 
 .digit .contain .shade {
@@ -1071,7 +1003,7 @@ p {
   margin: 0 auto;
   padding: 50px;
   background-color: white;
-  z-index: 90; 
+  z-index: 90;
   margin-top: 30px;
   display: flex;
   /* align-items: center; */
@@ -1087,7 +1019,7 @@ p {
 .digit .contain .shade .left {
   width: 60%;
   position: relative;
-  z-index: 90; 
+  z-index: 90;
 }
 
 .digit .contain .shade .left h1 {
@@ -1096,7 +1028,7 @@ p {
   font-size: 30px;
   font-weight: 600;
   margin-top: 10px;
-  z-index: 90; 
+  z-index: 90;
 }
 
 .digit .contain .shade .left p {
@@ -1107,7 +1039,7 @@ p {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  z-index: 90; 
+  z-index: 90;
 }
 
 .digit .contain .shade .down {
@@ -1115,7 +1047,7 @@ p {
   bottom: 50px;
   left: 51px;
   justify-content: flex-start;
-  z-index: 90; 
+  z-index: 90;
 }
 
 .digit .contain .shade.first {
@@ -1132,7 +1064,7 @@ p {
   left: -70px;
   width: 45%;
   height: 160px;
-  z-index: 90; 
+  z-index: 90;
   object-fit: cover;
 }
 
@@ -1149,7 +1081,7 @@ p {
   position: relative;
   top: -20px;
   left: -60px;
-  z-index: 90; 
+  z-index: 90;
 }
 
 .digit .contain .shade.second .right .absolute {
@@ -1173,6 +1105,94 @@ p {
   width: 100%;
   border-radius: 5px;
   /* height: 250px; */
+}
+
+
+.loader {
+  overflow: hidden;
+  position: relative;
+}
+
+.loaderBack {
+  height: 3px;
+  position: absolute;
+  background-color: #7d7c81;
+  height: 3px;
+  border-radius: 20px;
+  bottom: -10px;
+  z-index: 1;
+}
+
+.loaderBack.active {
+  background-color: #fff;
+}
+
+.loaderElement {
+  height: 3px;
+  position: absolute;
+  /* background-color: #a5d6a7; */
+  height: 3px;
+  border-radius: 20px;
+  bottom: -10px;
+  z-index: 2;
+  /* max-width: 353px; */
+}
+
+#one.loaderElement,
+#a.loaderBack,
+.loader:first-child {
+  width: 171px;
+}
+
+#two.loaderElement,
+#two.loader,
+#b.loaderBack {
+  width: 244px;
+}
+
+#three.loaderElement,
+#three.loader,
+#c.loaderBack {
+  width: 353px;
+}
+
+.loaderElement.active {
+  width: 0;
+}
+
+.loaderElement.active {
+  animation: getWidth 5s ease-in forwards;
+  animation-timing-function: linear;
+}
+#two.loaderElement.active, #three.loaderElement.active{
+  animation: getWidth2 5s ease-in forwards;
+  animation-timing-function: linear;
+}
+/* #three.loaderElement.active{
+  animation: getWidth2 5s ease-in forwards;
+  animation-timing-function: linear;
+} */
+
+@keyframes getWidth {
+  0% {
+    width: 0;
+    background-color: #df5851;
+  }
+  100% {
+    width: 94%;
+    background-color: #df5851;
+  }
+}
+
+@keyframes getWidth2 {
+  0% {
+    width: 0;
+    background-color: #df5851;
+  }
+  100% {
+    width: 100%;
+    background-color: #df5851;
+  }
 }
 
 @keyframes active {
@@ -1381,6 +1401,9 @@ p {
   .digit .contain {
     padding-top: 30px;
   }
+  .middle{
+    height: auto !important;
+  }
   .spotify .contain .spotForm,
   .plaid .contain .spotForm {
     align-items: center;
@@ -1394,6 +1417,23 @@ p {
     width: 80%;
     font-size: 20px;
     margin-bottom: 0;
+  }
+  #one.loaderElement,
+  #a.loaderBack,
+  .loader:first-child {
+    width: 122px;
+  }
+  
+  #two.loaderElement,
+  #two.loader,
+  #b.loaderBack {
+    width: 162px;
+  }
+  
+  #three.loaderElement,
+  #three.loader,
+  #c.loaderBack {
+    width: 235px;
   }
   .secondComp .contain .paraImg img {
     display: none;
@@ -1447,7 +1487,7 @@ p {
     font-size: 24px;
   }
   .asp #blackCerckle {
-    margin-top: 80%;
+    margin-top: 150%;
   }
   .spotify .contain .spotForm .right .box,
   .plaid .contain .spotForm .right .box {
@@ -1537,3 +1577,4 @@ p {
     left: 0;
   }
 }
+
