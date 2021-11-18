@@ -656,7 +656,7 @@ function widthToOffset() {
     [901, 1100],
     [1100, 2600],
   ];
-  var offsets = [1720, 1870, 2055, 2475, 2135];
+  var offsets = [1720, 1870, 2055, 2475, 2035];
 
   windowSizes.forEach(function (eachSize, index) {
     if (isBetween(eachSize)) {
@@ -677,7 +677,7 @@ function shadeOffset() {
     [901, 1100],
     [1100, 2600],
   ];
-  var offsets = [1780, 1850, 2155, 2775, 2335];
+  var offsets = [1780, 1850, 2155, 2575, 2135];
 
   windowSizes.forEach(function (eachSize, index) {
     if (isBetween(eachSize)) {

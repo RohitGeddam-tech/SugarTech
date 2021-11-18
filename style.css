@@ -242,17 +242,24 @@ p {
 .header .head {
   width: 92%;
   margin: 0 auto;
+  padding: 10px 0;
 }
 
-.head p {
+a,a:hover{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.head a {
   font-family: "Streetvertising";
   font-weight: bold;
   font-size: 30px;
   color: #f24940;
-  margin: 10px 0;
+  text-decoration: none;
 }
 
-.head p span {
+.head a span {
   color: white;
 }
 
