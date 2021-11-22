@@ -156,17 +156,17 @@ p {
   width: 100%;
   overflow-x: hidden;
   background-color: black;
+  transition: all 0.4s ease-in-out;
 }
 
 .App.black {
   background-color: black;
-  transition: all 0.4s ease-in-out;
   /* animation: black .5s forwards; */
 }
 
 .App.white {
   background-color: white;
-  transition: all 0.4s ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
   /* animation: white .5s forwards; */
 }
 
@@ -243,9 +243,13 @@ p {
   width: 92%;
   margin: 0 auto;
   padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-a,a:hover{
+a,
+a:hover {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -257,6 +261,15 @@ a,a:hover{
   font-size: 30px;
   color: #f24940;
   text-decoration: none;
+}
+
+.head a.contact {
+  font-family: "Metropolis";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: underline;
+  color: white;
 }
 
 .head a span {
@@ -362,7 +375,6 @@ span.normal {
   color: white;
 }
 
-
 .middle .right h1 {
   color: white;
 }
@@ -379,7 +391,7 @@ span.normal {
   flex-flow: column;
   justify-content: space-between;
   margin-left: 4.5%;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .middle .right .parta .set .bottomScroll {
@@ -421,6 +433,7 @@ span.normal {
   line-height: 64px;
   color: white;
   margin-top: 50px;
+  margin-bottom: 35px;
 }
 
 .middle .right .parta .set p span.blocked {
@@ -678,10 +691,22 @@ span.normal {
   font-weight: 600;
   line-height: 54px;
   color: white;
-  width: 60%;
+  width: 92%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* text-align: center; */
+}
+
+.spotify .contain p {
+  font-family: "Metropolis";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+  width: 92%;
   margin: 0 auto;
   margin-bottom: 50px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .spotForm {
@@ -718,39 +743,54 @@ span.normal {
   margin-bottom: 20px !important;
 }
 
+span#2,
+span#1,
+span#3 {
+  cursor: pointer;
+}
+
 .spotForm .right a {
   font-family: "Metropolis";
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 16px;
+  width: fit-content;
   text-decoration: none;
+  color: #68c0ff;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #68c0ff;
 }
 
 .spotForm .right .box {
   display: flex;
   width: 70%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin: 30px 0;
 }
 
 .spotForm .right .box p {
-  width: 120px;
-  height: 33px;
-  border: 2px solid white;
+  width: fit-content;
+  /* height: 33px; */
+  padding: 6px 12px;
+  border: 2px solid #ffaaa6;
   border-radius: 20px;
   font-family: "Metropolis";
   font-size: 14px;
   line-height: 16px;
   background-color: transparent;
-  color: white;
+  color: #ffaaa6;
   font-weight: 400;
   font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px;
   /* padding-left: 15px; */
   position: relative;
+  margin: 0;
+}
+.spotForm .right .box p:nth-child(2) {
+  margin-left: 10%;
 }
 
 .spotForm .right .box p span {
@@ -784,16 +824,16 @@ span.normal {
   text-align: center;
 }
 
-.plaid .contain .spotForm .left {
+/* .plaid .contain .spotForm .left {
   border: 1px solid black;
   border-color: transparent;
-  /* box-shadow: 0 0 4px rgb(204, 204, 204); */
-}
+  box-shadow: 0 0 4px rgb(204, 204, 204);
+} */
 
-.plaid .contain .spotForm .right .box p {
+/* .plaid .contain .spotForm .right .box p {
   border: 2px solid black;
   color: black;
-}
+} */
 
 .plaid .contain .spotForm {
   padding-top: 0;
@@ -1114,7 +1154,6 @@ span.normal {
   /* height: 250px; */
 }
 
-
 .loader {
   overflow: hidden;
   position: relative;
@@ -1168,17 +1207,17 @@ span.normal {
 }
 
 .loaderElement.active {
-  animation: getWidth 5s ease-in forwards;
+  animation: getWidth 8.8s ease-in forwards;
   animation-timing-function: linear;
 }
-#two.loaderElement.active, #three.loaderElement.active{
-  animation: getWidth2 5s ease-in forwards;
+#two.loaderElement.active {
+  animation: getWidth 5.6s ease-in forwards;
   animation-timing-function: linear;
 }
-/* #three.loaderElement.active{
-  animation: getWidth2 5s ease-in forwards;
+#three.loaderElement.active {
+  animation: getWidth2 3.6s ease-in forwards;
   animation-timing-function: linear;
-} */
+}
 
 @keyframes getWidth {
   0% {
@@ -1221,19 +1260,19 @@ span.normal {
 
 /* for ipadpro */
 @media (max-width: 1100px) {
-  .first .contain .middle {
+  /* .first .contain .middle {
     height: 100vh;
-  }
-  .first .contain .middle .left {
+  } */
+  /* .first .contain .middle .left {
     display: none;
   }
   .first .contain .middle .right {
     flex-flow: column;
     justify-content: center;
-  }
+  } */
   .first .contain .middle .right .parta {
     opacity: 1 !important;
-    width: 100%;
+    width: 50%;
     height: max-content;
     display: flex;
     align-items: center;
@@ -1241,13 +1280,16 @@ span.normal {
   }
   .first .contain .middle .right .parta .set {
     position: relative;
-    width: fit-content;
+    /* width: fit-content; */
     bottom: auto;
     left: auto;
-    align-items: center;
+    /* align-items: center; */
   }
   .first .contain .middle .right .parta .set p {
-    text-align: center;
+    /* text-align: center; */
+    font-size: 34px;
+    width: 100%;
+    line-height: 50px;
   }
   .first .contain .middle .right .parta .set .bottomScroll {
     display: none;
@@ -1258,16 +1300,37 @@ span.normal {
     align-items: center;
     justify-content: center;
   }
-  .first .contain .middle .right .partb img.secondGif,
-  img.firstGif,
-  img.lastGif {
-    position: relative !important;
-    width: 100%;
-    margin: 0 !important;
+  .first .contain .middle .right .partb img.firstGif {
+    margin-left: 0;
+    width: 80%;
   }
   .first .contain .middle .right .partb img.secondGif {
-    margin-top: 30px !important;
-    width: 650px;
+    /* margin-top: 30px !important; */
+    width: 80%;
+    margin-left: 0;
+  }
+  .first .contain .middle .right .partb img.lastGif {
+    /* margin-top: 30px !important; */
+    width: 820px;
+    margin-left: 8px;
+  }
+
+  #one.loaderElement,
+  #a.loaderBack,
+  .loader:first-child {
+    width: 122px;
+  }
+
+  #two.loaderElement,
+  #two.loader,
+  #b.loaderBack {
+    width: 162px;
+  }
+
+  #three.loaderElement,
+  #three.loader,
+  #c.loaderBack {
+    width: 235px;
   }
   /* .first .contain .middle .right .partb img.lastGif{
     width: 100%;
@@ -1276,12 +1339,32 @@ span.normal {
     width: 90%;
   }
   .spotForm .right .box {
-    width: 80%;
+    width: 100%;
   }
 }
 
 /* for ipad */
 @media (max-width: 900px) {
+  .first .contain .middle .right {
+    flex-flow: column;
+    /* justify-content: center; */
+  }
+  .first .contain .middle .right .parta {
+    width: 100%;
+  }
+  .first .contain .middle {
+    height: max-content;
+  }
+  .first .contain .middle .right .partb {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .first .contain .middle .right .partb img {
+    position: relative !important;
+    margin: 0 !important;
+    margin-top: 30px !important;
+    width: 80% !important;
+  }
   .secondLast .contain {
     width: 75%;
     padding: 150px 0;
@@ -1339,8 +1422,12 @@ span.normal {
     width: 38%;
   }
   .spotify .contain h1 {
-    width: 70%;
+    width: 100% !important;
     font-size: 30px;
+  }
+  .spotify .contain p {
+    width: 100%;
+    margin-bottom: 0;
   }
   .spotify .contain .spotForm,
   .plaid .contain .spotForm {
@@ -1350,42 +1437,47 @@ span.normal {
   .spotify .contain .spotForm .right,
   .plaid .contain .spotForm .right {
     width: 100%;
-    order: 1;
+    order: 2;
   }
   .spotify .contain .spotForm .right h1,
   .plaid .contain .spotForm .right h1 {
-    font-size: 45px;
+    font-size: 30px;
+    line-height: 30px;
   }
-  .spotify .contain .spotForm .right a,
+  /* .spotify .contain .spotForm .right a,
   .plaid .contain .spotForm .right a {
     font-size: 32px;
-  }
+  } */
   .spotify .contain .spotForm .right .box,
   .plaid .contain .spotForm .right .box {
-    width: 320px;
+    margin: 20px 0;
   }
   .spotify .contain .spotForm .left,
   .plaid .contain .spotForm .left {
     width: 100%;
-    order: 2;
+    order: 1;
     /* margin: 0 auto; */
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
-  /* .spotify .contain .spotForm .right .box, .plaid .contain .spotForm .right .box{
-    width: 90%;
-    margin: 0;
-    flex-flow: column;
+  .spotForm .right h1 {
+    order: 2;
   }
-  .spotify .contain .spotForm .right .box p, .plaid .contain .spotForm .right .box p{
-    margin: 30px 0;
-    margin-bottom: 0;
-  } */
+  .spotForm .right a {
+    order: 3;
+  }
+  .spotForm .right .box {
+    order: 1;
+    flex-flow: row wrap;
+  }
 }
 
 /* for mobile devices */
 @media (max-width: 600px) {
   .secondLast .contain {
     width: 92%;
+  }
+  .first .contain .middle .right .partb img {
+    width: 100% !important;
   }
   .secondLast .contain h1 {
     font-size: 20px;
@@ -1408,7 +1500,7 @@ span.normal {
   .digit .contain {
     padding-top: 30px;
   }
-  .middle{
+  .middle {
     height: auto !important;
   }
   .spotify .contain .spotForm,
@@ -1417,39 +1509,33 @@ span.normal {
   }
   .spotify .contain .spotForm .left,
   .plaid .contain .spotForm .left {
-    width: 90%;
+    width: 100%;
     flex-flow: column;
   }
-  .spotify .contain h1 {
-    width: 80%;
-    font-size: 20px;
-    margin-bottom: 0;
-  }
-  #one.loaderElement,
-  #a.loaderBack,
-  .loader:first-child {
-    width: 122px;
-  }
-  
-  #two.loaderElement,
-  #two.loader,
-  #b.loaderBack {
-    width: 162px;
-  }
-  
-  #three.loaderElement,
-  #three.loader,
-  #c.loaderBack {
-    width: 235px;
+  .secondComp .contain .paraImg {
+    flex-flow: column;
   }
   .secondComp .contain .paraImg img {
-    display: none;
+    /* display: none; */
+    width: 48.98px;
+    height: 59px;
   }
   .secondComp .contain .paraImg p {
-    font-size: 20px;
-    width: 100%;
+    width: 90%;
     margin: 0;
+    margin-left: 5%;
     text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 30px;
+  }
+  .digit .contain .shade .left,
+  .digit .contain .shade .right {
+    margin-top: 20px;
+  }
+  .digit .contain .shade .left p {
+    margin-bottom: 0;
   }
   .digit .contain .shade {
     flex-flow: column;
@@ -1472,9 +1558,15 @@ span.normal {
   .digit .contain .shade.second {
     padding-top: 40px;
   }
+  .digit .contain .shade.first .right {
+    margin-top: 40px;
+  }
+  .digit .contain .shade.second .right {
+    padding-top: 20px;
+  }
   .digit .contain .shade.second .right .absolute1 {
     width: 82%;
-    left: -40px;
+    left: -30px;
   }
   .digit .contain .shade.second .right .absolute {
     right: 0;
@@ -1505,10 +1597,6 @@ span.normal {
   .first .contain .middle .right .parta .set {
     width: 100%;
   }
-  .first .contain .middle .right .parta .set p {
-    font-size: 30px;
-    width: 100%;
-  }
   .spotify .contain .spotForm .right h1,
   .plaid .contain .spotForm .right h1 {
     font-size: 35px;
@@ -1527,10 +1615,6 @@ span.normal {
   .secondLast .contain h1 {
     font-size: 18px;
     margin-bottom: 30px;
-  }
-  .spotify .contain h1 {
-    width: 100%;
-    font-size: 18px;
   }
   .secondComp .contain .paraImg p {
     font-size: 18px;
@@ -1584,4 +1668,3 @@ span.normal {
     left: 0;
   }
 }
-

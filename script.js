@@ -51,6 +51,7 @@ let loada = () => {
   if (a) {
     one.classList.add("active");
     first1.classList.add("active");
+    firstImg.src = "./image/Website.gif";
     one.addEventListener("animationend", () => {
       one.classList.remove("active");
       two.classList.add("active");
@@ -63,6 +64,8 @@ let loada = () => {
       firstImg.style.display = "none";
       secondImg.style.display = "block";
       thirdImg.style.display = "none";
+      secondImg.src = "./image/vid.gif";
+      firstImg.src = "#";
     });
     two.addEventListener("animationend", () => {
       two.classList.remove("active");
@@ -75,6 +78,11 @@ let loada = () => {
       firstImg.style.display = "none";
       secondImg.style.display = "none";
       thirdImg.style.display = "block";
+      thirdImg.src = "./image/Web-design.gif";
+      if (window.innerWidth < 900) {
+        thirdImg.src = "./image/design.gif";
+      }
+      secondImg.src = "#";
     });
     three.addEventListener("animationend", () => {
       three.classList.remove("active");
@@ -88,44 +96,137 @@ let loada = () => {
       firstImg.style.display = "block";
       secondImg.style.display = "none";
       thirdImg.style.display = "none";
+      firstImg.src = "./image/Website.gif";
+      if (window.innerWidth < 1100) {
+        firstImg.src = "./image/website2.gif";
+      }
+      thirdImg.src = "#";
     });
   }
 };
 
-window.addEventListener("load", () => {
+const oneClick = () => {
+  one.classList.add("active");
+  three.classList.remove("active");
+  two.classList.remove("active");
+  first.classList.add("active");
+  second.classList.remove("active");
+  third.classList.remove("active");
+  first1.classList.add("active");
+  second2.classList.remove("active");
+  third3.classList.remove("active");
+  firstImg.style.display = "block";
+  secondImg.style.display = "none";
+  thirdImg.style.display = "none";
+  firstImg.src = "./image/Website.gif";
+  if (window.innerWidth < 1100) {
+    firstImg.src = "./image/website2.gif";
+  }
+  thirdImg.src = "#";
+  secondImg.src = "#";
+};
+
+const twoClick = () => {
+  one.classList.remove("active");
+  three.classList.remove("active");
+  two.classList.add("active");
+  first.classList.remove("active");
+  third.classList.remove("active");
+  second.classList.add("active");
+  first1.classList.remove("active");
+  third3.classList.remove("active");
+  second2.classList.add("active");
+  firstImg.style.display = "none";
+  secondImg.style.display = "block";
+  thirdImg.style.display = "none";
+  secondImg.src = "./image/vid.gif";
+  thirdImg.src = "#";
+  firstImg.src = "#";
+};
+
+const threeClick = () => {
+  two.classList.remove("active");
+  one.classList.remove("active");
+  three.classList.add("active");
+  third.classList.add("active");
+  second.classList.remove("active");
+  first.classList.remove("active");
+  first1.classList.remove("active");
+  third3.classList.add("active");
+  second2.classList.remove("active");
+  firstImg.style.display = "none";
+  secondImg.style.display = "none";
+  thirdImg.style.display = "block";
+  thirdImg.src = "./image/Web-design.gif";
+  if (window.innerWidth < 900) {
+    thirdImg.src = "./image/design.gif";
+  }
+  firstImg.src = "#";
+  secondImg.src = "#";
+};
+
+const afterLoad = () => {
   loada();
 
   function myFunction3() {
     firstImg.src = "./image/website2.gif";
   }
 
-  window.addEventListener("scroll", () => {
-    var scaleAsp =
-      document.documentElement.scrollTop -
-      here.getBoundingClientRect().top -
-      1200;
-    if (
-      document.documentElement.scrollTop >
-      cerckleAnimMain.getBoundingClientRect().top + 300
-    ) {
-      leftBoxesRef.style.transform =
-        "translateY(" + here.getBoundingClientRect().top * 2 + "px)";
-      rightBoxesRef.style.transform =
-        "translateY(-" + here.getBoundingClientRect().top * 2 + "px)";
-    }
-    if (
-      document.documentElement.scrollTop >
-      here.getBoundingClientRect().top + 1200
-    ) {
-      blackCerckle.style.transform =
-        "scale(" + scaleAsp + ", " + scaleAsp + ")";
-    } else {
-      blackCerckle.style.transform = "scale(0,0)";
-    }
-  });
+  if (window.innerWidth > 900) {
+    window.addEventListener("scroll", () => {
+      var scaleAsp =
+        document.documentElement.scrollTop -
+        here.getBoundingClientRect().top -
+        1000;
+      if (
+        document.documentElement.scrollTop >
+        cerckleAnimMain.getBoundingClientRect().top + 300
+      ) {
+        leftBoxesRef.style.transform =
+          "translateY(" + here.getBoundingClientRect().top * 2 + "px)";
+        rightBoxesRef.style.transform =
+          "translateY(-" + here.getBoundingClientRect().top * 2 + "px)";
+      }
+      if (
+        document.documentElement.scrollTop >
+        here.getBoundingClientRect().top + 1000
+      ) {
+        blackCerckle.style.transform =
+          "scale(" + scaleAsp + ", " + scaleAsp + ")";
+      } else {
+        blackCerckle.style.transform = "scale(0,0)";
+      }
+    });
+  } else {
+    window.addEventListener("scroll", () => {
+      var scaleAsp =
+        document.documentElement.scrollTop -
+        here.getBoundingClientRect().top -
+        1200;
+      if (
+        document.documentElement.scrollTop >
+        cerckleAnimMain.getBoundingClientRect().top + 300
+      ) {
+        leftBoxesRef.style.transform =
+          "translateY(" + here.getBoundingClientRect().top * 2 + "px)";
+        rightBoxesRef.style.transform =
+          "translateY(-" + here.getBoundingClientRect().top * 2 + "px)";
+      }
+      if (
+        document.documentElement.scrollTop >
+        here.getBoundingClientRect().top + 1200
+      ) {
+        blackCerckle.style.transform =
+          "scale(" + scaleAsp + ", " + scaleAsp + ")";
+      } else {
+        blackCerckle.style.transform = "scale(0,0)";
+      }
+    });
+  }
 
   if (window.innerWidth > 1100) {
     window.addEventListener("scroll", () => {
+      // console.log(window.pageYOffset);
       if (window.pageYOffset < 1140) {
         app.classList.add("black");
         app.classList.remove("white");
@@ -136,38 +237,22 @@ window.addEventListener("load", () => {
         app.classList.remove("black");
       }
 
-      if (window.pageYOffset > 2035 && window.pageYOffset < 5680) {
+      if (window.pageYOffset > 2035 && window.pageYOffset < 5380) {
         app.classList.add("black");
         app.classList.remove("white");
         junc.classList.add("inactive");
         junc.classList.remove("aactive");
-        junc1.classList.remove("blackbord");
-        junc1.classList.add("whitebord");
-        junc2.classList.remove("blackbord");
-        junc2.classList.add("whitebord");
         watt.classList.add("inactive");
         watt.classList.remove("aactive");
       }
 
-      if (window.pageYOffset > 5680 && window.pageYOffset < 5950) {
+      if (window.pageYOffset > 5380 && window.pageYOffset < 5950) {
         app.classList.add("white");
         app.classList.remove("black");
         junc.classList.add("aactive");
         junc.classList.remove("inactive");
         watt.classList.add("aactive");
         watt.classList.remove("inactive");
-        junc1.classList.add("blackbord");
-        junc1.classList.remove("whitebord");
-        watt1.classList.add("blackbord");
-        watt1.classList.remove("whitebord");
-        safe1.classList.add("blackbord");
-        safe1.classList.remove("whitebord");
-        junc2.classList.remove("whitebord");
-        junc2.classList.add("blackbord");
-        watt2.classList.add("blackbord");
-        watt2.classList.remove("whitebord");
-        safe2.classList.add("blackbord");
-        safe2.classList.remove("whitebord");
       }
 
       if (window.pageYOffset > 5950 && window.pageYOffset < 6760) {
@@ -179,28 +264,12 @@ window.addEventListener("load", () => {
         watt.classList.remove("aactive");
         safe.classList.add("inactive");
         safe.classList.remove("aactive");
-        junc1.classList.remove("blackbord");
-        junc1.classList.add("whitebord");
-        watt1.classList.remove("blackbord");
-        watt1.classList.add("whitebord");
-        safe1.classList.remove("blackbord");
-        safe1.classList.add("whitebord");
-        junc2.classList.remove("blackbord");
-        junc2.classList.add("whitebord");
-        watt2.classList.remove("blackbord");
-        watt2.classList.add("whitebord");
-        safe2.classList.remove("blackbord");
-        safe2.classList.add("whitebord");
       }
       if (window.pageYOffset > 6760) {
         app.classList.add("white");
         app.classList.remove("black");
         safe.classList.add("aactive");
         safe.classList.remove("inactive");
-        safe1.classList.add("blackbord");
-        safe1.classList.remove("whitebord");
-        safe2.classList.add("blackbord");
-        safe2.classList.remove("whitebord");
       }
     });
   } else {
@@ -213,29 +282,19 @@ window.addEventListener("load", () => {
           app.classList.remove("white");
         }
 
-        if (window.pageYOffset > 1380 && window.pageYOffset < 2475) {
+        if (window.pageYOffset > 1380 && window.pageYOffset < 2055) {
           app.classList.add("white");
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 2475 && window.pageYOffset < 6280) {
+        if (window.pageYOffset > 2055 && window.pageYOffset < 5380) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
           junc.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt.classList.add("inactive");
-          watt.classList.remove("aactive");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 6280 && window.pageYOffset < 6710) {
+        if (window.pageYOffset > 5380 && window.pageYOffset < 5910) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -244,21 +303,9 @@ window.addEventListener("load", () => {
           watt.classList.remove("inactive");
           safe.classList.add("aactive");
           safe.classList.remove("inactive");
-          junc1.classList.add("blackbord");
-          junc1.classList.remove("whitebord");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          junc2.classList.remove("whitebord");
-          junc2.classList.add("blackbord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 6710 && window.pageYOffset < 7260) {
+        if (window.pageYOffset > 5910 && window.pageYOffset < 6500) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -267,34 +314,14 @@ window.addEventListener("load", () => {
           watt.classList.remove("aactive");
           safe.classList.add("inactive");
           safe.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          safe1.classList.remove("blackbord");
-          safe1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
-          safe2.classList.remove("blackbord");
-          safe2.classList.add("whitebord");
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
-        if (window.pageYOffset > 7260) {
+        if (window.pageYOffset > 6500) {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
           safe.classList.remove("inactive");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
           last2.classList.remove("inactive");
           last2.classList.add("aactive");
         }
@@ -313,24 +340,14 @@ window.addEventListener("load", () => {
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 1855 && window.pageYOffset < 7610) {
+        if (window.pageYOffset > 1855 && window.pageYOffset < 7810) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
           junc.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt.classList.add("inactive");
-          watt.classList.remove("aactive");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 7610 && window.pageYOffset < 8610) {
+        if (window.pageYOffset > 7810 && window.pageYOffset < 8690) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -339,21 +356,9 @@ window.addEventListener("load", () => {
           watt.classList.remove("inactive");
           safe.classList.add("aactive");
           safe.classList.remove("inactive");
-          junc1.classList.add("blackbord");
-          junc1.classList.remove("whitebord");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          junc2.classList.remove("whitebord");
-          junc2.classList.add("blackbord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 8610 && window.pageYOffset < 9610) {
+        if (window.pageYOffset > 8690 && window.pageYOffset < 9610) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -362,18 +367,6 @@ window.addEventListener("load", () => {
           watt.classList.remove("aactive");
           safe.classList.add("inactive");
           safe.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          safe1.classList.remove("blackbord");
-          safe1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
-          safe2.classList.remove("blackbord");
-          safe2.classList.add("whitebord");
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
@@ -381,23 +374,16 @@ window.addEventListener("load", () => {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
           safe.classList.remove("inactive");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
           last2.classList.remove("inactive");
           last2.classList.add("aactive");
         }
       });
     }
     if (window.innerWidth < 600) {
-      thirdImg.src = "./image/design.gif";
+      // thirdImg.src = "./image/design.gif";
       window.addEventListener("scroll", () => {
+        // console.log(window.pageYOffset);
         if (window.pageYOffset < 1000) {
           app.classList.add("black");
           app.classList.remove("white");
@@ -408,24 +394,14 @@ window.addEventListener("load", () => {
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 1870 && window.pageYOffset < 6840) {
+        if (window.pageYOffset > 1870 && window.pageYOffset < 7240) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
           junc.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt.classList.add("inactive");
-          watt.classList.remove("aactive");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 6840 && window.pageYOffset < 7610) {
+        if (window.pageYOffset > 7240 && window.pageYOffset < 7910) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -434,21 +410,9 @@ window.addEventListener("load", () => {
           watt.classList.remove("inactive");
           safe.classList.add("aactive");
           safe.classList.remove("inactive");
-          junc1.classList.add("blackbord");
-          junc1.classList.remove("whitebord");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          junc2.classList.remove("whitebord");
-          junc2.classList.add("blackbord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 7610 && window.pageYOffset < 8410) {
+        if (window.pageYOffset > 7910 && window.pageYOffset < 8710) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -457,34 +421,14 @@ window.addEventListener("load", () => {
           watt.classList.remove("aactive");
           safe.classList.add("inactive");
           safe.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          safe1.classList.remove("blackbord");
-          safe1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
-          safe2.classList.remove("blackbord");
-          safe2.classList.add("whitebord");
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
-        if (window.pageYOffset > 8410) {
+        if (window.pageYOffset > 8710) {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
           safe.classList.remove("inactive");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
           last2.classList.remove("inactive");
           last2.classList.add("aactive");
         }
@@ -493,6 +437,7 @@ window.addEventListener("load", () => {
     if (window.innerWidth < 400) {
       thirdImg.src = "./image/design.gif";
       window.addEventListener("scroll", () => {
+        // console.log(window.pageYOffset);
         if (window.pageYOffset < 1000) {
           app.classList.add("black");
           app.classList.remove("white");
@@ -503,24 +448,14 @@ window.addEventListener("load", () => {
           app.classList.remove("black");
         }
 
-        if (window.pageYOffset > 1720 && window.pageYOffset < 6740) {
+        if (window.pageYOffset > 1720 && window.pageYOffset < 7100) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("inactive");
           junc.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt.classList.add("inactive");
-          watt.classList.remove("aactive");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
         }
 
-        if (window.pageYOffset > 6740 && window.pageYOffset < 7510) {
+        if (window.pageYOffset > 7100 && window.pageYOffset < 7780) {
           app.classList.add("white");
           app.classList.remove("black");
           junc.classList.add("aactive");
@@ -529,21 +464,9 @@ window.addEventListener("load", () => {
           watt.classList.remove("inactive");
           safe.classList.add("aactive");
           safe.classList.remove("inactive");
-          junc1.classList.add("blackbord");
-          junc1.classList.remove("whitebord");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          junc2.classList.remove("whitebord");
-          junc2.classList.add("blackbord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
         }
 
-        if (window.pageYOffset > 7510 && window.pageYOffset < 8310) {
+        if (window.pageYOffset > 7780 && window.pageYOffset < 8490) {
           app.classList.add("black");
           app.classList.remove("white");
           junc.classList.add("aactive");
@@ -552,34 +475,14 @@ window.addEventListener("load", () => {
           watt.classList.remove("aactive");
           safe.classList.add("inactive");
           safe.classList.remove("aactive");
-          junc1.classList.remove("blackbord");
-          junc1.classList.add("whitebord");
-          watt1.classList.remove("blackbord");
-          watt1.classList.add("whitebord");
-          safe1.classList.remove("blackbord");
-          safe1.classList.add("whitebord");
-          junc2.classList.remove("blackbord");
-          junc2.classList.add("whitebord");
-          watt2.classList.remove("blackbord");
-          watt2.classList.add("whitebord");
-          safe2.classList.remove("blackbord");
-          safe2.classList.add("whitebord");
           last2.classList.add("inactive");
           last2.classList.remove("aactive");
         }
-        if (window.pageYOffset > 8310) {
+        if (window.pageYOffset > 8490) {
           app.classList.add("white");
           app.classList.remove("black");
           safe.classList.add("aactive");
-          watt1.classList.add("blackbord");
-          watt1.classList.remove("whitebord");
-          watt2.classList.add("blackbord");
-          watt2.classList.remove("whitebord");
           safe.classList.remove("inactive");
-          safe1.classList.add("blackbord");
-          safe1.classList.remove("whitebord");
-          safe2.classList.add("blackbord");
-          safe2.classList.remove("whitebord");
           last2.classList.remove("inactive");
           last2.classList.add("aactive");
         }
@@ -593,16 +496,6 @@ window.addEventListener("load", () => {
     leftDiv.style.left = `${container.left}px`;
   }
 
-  // if ((digit.style.opacity = "1")) {
-  //   setTimeout(() => {
-  //     shade.classList.add("active");
-  //     // here.style.display = "none";
-  //   }, 2000);
-  // } else {
-  //   shade.classList.remove("active");
-  //   // here.style.display = "block";
-  // }
-
   white.addEventListener("mouseenter", () => {
     text.innerHTML = "";
     text.appendChild(document.createElement("img")).src =
@@ -613,16 +506,6 @@ window.addEventListener("load", () => {
     text.innerHTML = "Get in touch";
   });
 
-  // white2.addEventListener("mouseenter", () => {
-  //   ctext.innerHTML = "";
-  //   ctext.appendChild(document.createElement("img")).src =
-  //     "./image/blackMail.png";
-  // });
-
-  // white2.addEventListener("mouseleave", () => {
-  //   ctext.innerHTML = "Get in touch";
-  // });
-
   blackBtn.addEventListener("mouseenter", () => {
     btext.innerHTML = "";
     btext.appendChild(document.createElement("img")).src =
@@ -632,7 +515,10 @@ window.addEventListener("load", () => {
   blackBtn.addEventListener("mouseleave", () => {
     btext.innerHTML = "Get in touch";
   });
-});
+};
+
+window.addEventListener("load", () => afterLoad());
+window.addEventListener("resize", () => afterLoad());
 
 digit.classList.remove("active");
 
@@ -656,7 +542,7 @@ function widthToOffset() {
     [901, 1100],
     [1100, 2600],
   ];
-  var offsets = [1720, 1870, 2055, 2475, 2035];
+  var offsets = [1720, 1870, 2055, 2055, 2035];
 
   windowSizes.forEach(function (eachSize, index) {
     if (isBetween(eachSize)) {
@@ -677,7 +563,7 @@ function shadeOffset() {
     [901, 1100],
     [1100, 2600],
   ];
-  var offsets = [1780, 1850, 2155, 2575, 2135];
+  var offsets = [1780, 1850, 2155, 2105, 2135];
 
   windowSizes.forEach(function (eachSize, index) {
     if (isBetween(eachSize)) {

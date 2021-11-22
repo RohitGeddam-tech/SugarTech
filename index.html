@@ -15,6 +15,7 @@
       <div class="header">
         <div class="head">
           <a href="/#top">Sugar<span>logger</span></a>
+          <a href="mailto:" class="contact">Contact Us</a>
         </div>
       </div>
       <div class="first" id="firstComp">
@@ -29,20 +30,34 @@
                     <span class="normal">big, bold and brave</span>
                     <span class="blocked"></span>
                     <span class="greyish">
-                      <span class="loader">
+                      <span class="normal">on</span>
+                      <span
+                        class="loader"
+                        onclick="oneClick()"
+                        style="cursor: pointer"
+                      >
                         <span id="one" class="loaderElement"></span>
                         <span id="a" class="loaderBack"></span>
                         <span id="1" class="active">website</span>
                       </span>
                       <span class="normal">,</span>
-                      <span class="loader">
+                      <span class="blocked"></span>
+                      <span
+                        class="loader"
+                        onclick="twoClick()"
+                        style="cursor: pointer"
+                      >
                         <span id="two" class="loaderElement"></span>
                         <span id="b" class="loaderBack"></span>
                         <span id="2">application</span>
                       </span>
-                      <span class="blocked"></span>
                       <span class="normal">and</span>
-                      <span class="loader">
+                      <span class="blocked"></span>
+                      <span
+                        class="loader"
+                        onclick="threeClick()"
+                        style="cursor: pointer"
+                      >
                         <span id="three" class="loaderElement"></span>
                         <span id="c" class="loaderBack"></span>
                         <span id="3"> video animation </span>
@@ -64,25 +79,14 @@
                 </div>
               </div>
               <div class="partb">
-                <img
-                  class="secondGif"
+                <img class="secondGif" alt="website" id="firstImg" />
+                <img class="firstGif" alt="application" id="secondImg" />
+                <img class="lastGif" alt="video app" id="thirdImg" />
+                <!--
                   src="image/Website.gif"
-                  alt="website"
-                  id="firstImg"
-                />
-                <img
-                  class="firstGif"
                   src="image/vid.gif"
-                  alt="application"
-                  id="secondImg"
-                />
-                <img
-                  class="lastGif"
                   src="image/Web-design.gif"
-                  alt="video app"
-                  id="thirdImg"
-                />
-                <!-- <img src="image/Rectd.png" alt="rectangle" id="fourthImg" /> -->
+                   <img src="image/Rectd.png" alt="rectangle" id="fourthImg" /> -->
                 <div class="bottom" id="last"></div>
               </div>
             </div>
@@ -284,10 +288,11 @@
       </div>
       <div class="spotify">
         <div class="contain">
-          <h1>
+          <h1>Our Work</h1>
+          <p>
             Having worked with clients from various fields, you can trust us to
             get the job done.
-          </h1>
+          </p>
           <div class="spotForm">
             <div class="left">
               <img src="./image/Mirana.webp" alt="Mirana" />
