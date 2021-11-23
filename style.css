@@ -1318,19 +1318,19 @@ span#3 {
   #one.loaderElement,
   #a.loaderBack,
   .loader:first-child {
-    width: 122px;
+    width: 130px;
   }
 
   #two.loaderElement,
   #two.loader,
   #b.loaderBack {
-    width: 162px;
+    width: 184px;
   }
 
   #three.loaderElement,
   #three.loader,
   #c.loaderBack {
-    width: 235px;
+    width: 267px;
   }
   /* .first .contain .middle .right .partb img.lastGif{
     width: 100%;
@@ -1650,7 +1650,7 @@ span#3 {
     width: 100%;
   }
   .first .contain .middle .right .parta .set p {
-    font-size: 30px;
+    /* font-size: 30px; */
     width: 100%;
   }
   .spotify .contain .spotForm .right .box,
